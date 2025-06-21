@@ -20,10 +20,10 @@ class MyBackButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(25.r),
       child: Container(
         width:48.w,
-        height:48.h,
+        height:48.w,
         decoration: BoxDecoration(
           color: isFilled ? AppConstants.primaryColor:AppConstants.secondaryColor,
-          borderRadius: BorderRadius.circular(25.r),
+          shape:BoxShape.circle,
           border: Border.all(
             color: AppConstants.primaryColor,
             width:1,
@@ -33,7 +33,7 @@ class MyBackButton extends StatelessWidget {
           child: Image.asset(
             "assets/icons/back_arrow_icon.png",
             width:24.w,
-            height:24.h,
+            height:24.w,
             color: isFilled ? AppConstants.secondaryColor:AppConstants.primaryTextColor2,
           ),
         ),

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/controller/login_controller.dart';
+import 'package:ride_hub/controller/selection_controller.dart';
+import 'package:ride_hub/view/screens/login_screen.dart';
+
+import 'l10n/app_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +23,12 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MultiProvider(providers:[
+          ChangeNotifierProvider(create:(context) => SelectionController(),),
+          ChangeNotifierProvider(create:(context) => LoginController(),),
+
+        ],
+        child: MaterialApp(
           title: 'Ride Hub',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -35,9 +45,11 @@ class MyApp extends StatelessWidget {
             Locale('ar'), // Arabic
           ],
           home: child,
+        ),
+
         );
       },
-      child: const Scaffold(),
+      child:LoginScreen(),
     );
   }
 }
