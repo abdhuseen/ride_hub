@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/controller/login_controller.dart';
 import 'package:ride_hub/controller/selection_controller.dart';
+import 'package:ride_hub/view/screens/Rental/rental_home.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
 
 import 'l10n/app_localizations.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         ],
         child: MaterialApp(
           title: 'Ride Hub',
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
 
         );
       },
-      child:LoginScreen(),
+      child:RentalHome(),
     );
   }
 }
