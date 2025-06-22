@@ -18,12 +18,14 @@ class SelectionScreen extends StatelessWidget {
       body:Center(
           child:Column(
             children: [
+              //app logo image
               Padding(padding:EdgeInsets.fromLTRB(33.w,152.h,33.w,0),
                 child:Image.asset("assets/images/app_logo.png",
                   width:494.w,
                   height:494.h,
                 ),
               ),
+              //buy a car button
               Padding(padding:EdgeInsets.fromLTRB(57.w,27.h,57.w,0),
                 child:PrimaryButton(text:AppLang.getLang(context: context).buy_a_car, onClick:(){
 
@@ -31,6 +33,7 @@ class SelectionScreen extends StatelessWidget {
 
                 }),
               ),
+              //rent a car button
               Padding(padding:EdgeInsets.fromLTRB(57.w,27.h,57.w,0),
                 child:PrimaryButton(text:AppLang.getLang(context: context).rental_a_car, onClick:(){
 

@@ -65,5 +65,9 @@
   "summary_of_your_experience":"Summary of your experience",
   "submit":"Submit",
   "male":"Male",
-  "female":"Female"
+  "female":"Female",
+  "create_account":"Create account",
+  "email":"Email",
+  "card_holder_name":"card holder name "
+
 }

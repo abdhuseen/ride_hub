@@ -209,4 +209,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get female => 'أنثى';
+
+  @override
+  String get create_account => 'إنشاء حساب';
+
+  @override
+  String get email => 'البريد الإلكتروني';
+
+  @override
+  String get card_holder_name => 'اسم صاحب البطاقة';
 }

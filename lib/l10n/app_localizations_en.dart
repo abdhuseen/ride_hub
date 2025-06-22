@@ -211,4 +211,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get female => 'Female';
+
+  @override
+  String get create_account => 'Create account';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get card_holder_name => 'card holder name ';
 }

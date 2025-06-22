@@ -14,8 +14,8 @@ class AppConstants {
   static const secondaryColor=Color(0xffffffff);
   ///star background color 1 code is #F2CF63
   static const starColor=Color(0xfff2cf63);
-  ///star background color 2 code is #2CF63
-  static const starColor2=Color(0xfff2cf63);
+  ///star background color 2 code is #2C2C2C
+  static const starColor2=Color(0xff2c2c2c);
   ///used for text color code is #0D0D0D
   static const primaryTextColor=Color(0xff0d0d0d);
   ///used for text color code is #000000

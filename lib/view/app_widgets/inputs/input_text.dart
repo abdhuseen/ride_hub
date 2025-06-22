@@ -11,26 +11,27 @@ class InputText extends StatelessWidget {
   final TextStyle hintStyle;
   final TextEditingController? controller;
   final TextInputType textInputType;
+  final bool isMini;
 
-   InputText({
+   const InputText({
     super.key,
     required this.hintText,
     required this.hintStyle,
     required this.textInputType,
     this.isPassword = false,
     this.controller,
+     this.isMini=false
 
   });
 
   @override
   Widget build(BuildContext context) {
-
     return isPassword ? passwordInputField() : normalInputField();
   }
 
   Widget normalInputField() {
     return Container(
-      width: 380.w,
+      width:isMini?177.w:380.w,
       decoration: BoxDecoration(
         color: AppConstants.secondaryColor,
         borderRadius: BorderRadius.circular(25.r),
@@ -55,7 +56,6 @@ class InputText extends StatelessWidget {
       ),
     );
   }
-//loginController
   Widget passwordInputField() {
     return Container(
       width: 380.w,
@@ -99,4 +99,5 @@ class InputText extends StatelessWidget {
 
     );
   }
+
 }

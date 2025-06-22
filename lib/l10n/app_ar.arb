@@ -65,5 +65,10 @@
   "summary_of_your_experience": "ملخص تجربتك",
   "submit": "إرسال",
   "male": "ذكر",
-  "female": "أنثى"
+  "female": "أنثى",
+  "create_account":"إنشاء حساب",
+  "email": "البريد الإلكتروني",
+  "card_holder_name":"اسم صاحب البطاقة"
+
+
 }

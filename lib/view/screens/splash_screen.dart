@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
         (){
 
-        Navigator.push(context,MaterialPageRoute(builder:(context) =>SelectionScreen(),));
+        Navigator.pushReplacement(context,MaterialPageRoute(builder:(context) =>SelectionScreen(),));
 
         }
     );

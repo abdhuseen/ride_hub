@@ -10,6 +10,4 @@ class SelectionController extends ChangeNotifier{
     notifyListeners();
 
   }
-
-
 }

@@ -499,6 +499,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Female'**
   String get female;
+
+  /// No description provided for @create_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get create_account;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @card_holder_name.
+  ///
+  /// In en, this message translates to:
+  /// **'card holder name '**
+  String get card_holder_name;
 }
 
 class _AppLocalizationsDelegate
