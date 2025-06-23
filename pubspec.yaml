@@ -36,11 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   http: ^1.4.0
   provider: ^6.1.5
-  #secure_shared_preferences: ^0.0.4
+  # secure_shared_preferences: ^0.0.4
   flutter_screenutil: ^5.9.3
   flutter_localizations:
     sdk: flutter
-  intl: any
+  intl: ^0.20.2
   google_fonts: ^6.2.1
   cryptography: ^2.7.0
 
@@ -63,6 +63,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/testImages/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -107,3 +108,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_assets:
+  assets_path: assets/images
+  output_path: lib/core/
+  filename: app_images.dart
+  field_prefix:
+    from: assetsImages
+    to:
+  ignore_comments: true
+  classname: AppImages

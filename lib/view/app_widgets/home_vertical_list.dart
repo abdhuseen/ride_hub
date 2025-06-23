@@ -4,16 +4,23 @@ import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/model/office.dart';
 import 'package:ride_hub/view/app_widgets/inputs/base_text.dart';
+import 'package:ride_hub/view/screens/Rental/office_screen.dart';
+import 'package:ride_hub/view/screens/Rental/see_all_screen.dart';
 
 class HomeVerticalList extends StatelessWidget {
   String listTitle;
   List<Office> officeList;
 
-  HomeVerticalList({super.key, required this.listTitle,required this.officeList});
+  HomeVerticalList({
+    super.key,
+    required this.listTitle,
+    required this.officeList,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+
+    return Column(
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,7 +32,9 @@ class HomeVerticalList extends StatelessWidget {
               textColor: AppConstants.primaryTextColor,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> SeeAllScreen(title: listTitle,officeList: officeList,),),);
+              },
               child: BaseText(
                 text: "${AppLang.getLang(context: context).see_all} >",
                 fontSize: AppConstants.size6.sp,
@@ -45,8 +54,21 @@ class HomeVerticalList extends StatelessWidget {
               itemCount: 5,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
-                  child: Column(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  child: TextButton(onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder:
+                            (context) => OfficeScreen(
+                          title: officeList[index].name,
+                          imageLink: officeList[index].imgLink,
+                          rate: double.parse(officeList[index].rate.toString()),
+                          reservation: double.parse(officeList[index].numberOfReservations.toString()),
+                        ),
+                      ),
+                    );
+                  }, child: Column(
                     children: [
                       Image.asset(
                         officeList[index].imgLink,
@@ -61,7 +83,7 @@ class HomeVerticalList extends StatelessWidget {
                         textColor: AppConstants.primaryTextColor,
                       ),
                     ],
-                  ),
+                  )),
                 );
               },
             ),

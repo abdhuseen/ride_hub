@@ -13,31 +13,31 @@ class RentalHome extends StatelessWidget {
   List<Office> economicOffices = [
     Office(
       name: 'Office 1',
-      imgLink: 'assets/images/carOffice1.png',
+      imgLink: 'assets/testImages/carOffice1.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 2',
-      imgLink: 'assets/images/carOffice2.png',
+      imgLink: 'assets/testImages/carOffice2.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 3',
-      imgLink: 'assets/images/carOffice3.png',
+      imgLink: 'assets/testImages/carOffice3.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 4',
-      imgLink: 'assets/images/carOffice4.png',
+      imgLink: 'assets/testImages/carOffice4.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 5',
-      imgLink: 'assets/images/carOffice5.png',
+      imgLink: 'assets/testImages/carOffice5.png',
       rate: 4,
       numberOfReservations: 200,
     ),
@@ -45,63 +45,63 @@ class RentalHome extends StatelessWidget {
   List<Office> electricOffices = [
     Office(
       name: 'Office 1',
-      imgLink: 'assets/images/carOffice1.png',
-      rate: 4,
-      numberOfReservations: 200,
+      imgLink: 'assets/testImages/carOffice1.png',
+      rate: 4.5,
+      numberOfReservations: 220,
     ),
     Office(
       name: 'Office 2',
-      imgLink: 'assets/images/carOffice2.png',
-      rate: 4,
-      numberOfReservations: 200,
+      imgLink: 'assets/testImages/carOffice2.png',
+      rate: 4.5,
+      numberOfReservations: 220,
     ),
     Office(
       name: 'Office 3',
-      imgLink: 'assets/images/carOffice3.png',
-      rate: 4,
-      numberOfReservations: 200,
+      imgLink: 'assets/testImages/carOffice3.png',
+      rate: 4.5,
+      numberOfReservations: 220,
     ),
     Office(
       name: 'Office 4',
-      imgLink: 'assets/images/carOffice4.png',
-      rate: 4,
-      numberOfReservations: 200,
+      imgLink: 'assets/testImages/carOffice4.png',
+      rate: 4.5,
+      numberOfReservations: 220,
     ),
     Office(
       name: 'Office 5',
-      imgLink: 'assets/images/carOffice5.png',
-      rate: 4,
-      numberOfReservations: 200,
+      imgLink: 'assets/testImages/carOffice5.png',
+      rate: 4.5,
+      numberOfReservations: 220,
     ),
   ];
   List<Office> luxuryOffices = [
     Office(
       name: 'Office 1',
-      imgLink: 'assets/images/carOffice1.png',
+      imgLink: 'assets/testImages/carOffice1.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 2',
-      imgLink: 'assets/images/carOffice2.png',
+      imgLink: 'assets/testImages/carOffice2.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 3',
-      imgLink: 'assets/images/carOffice3.png',
+      imgLink: 'assets/testImages/carOffice3.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 4',
-      imgLink: 'assets/images/carOffice4.png',
+      imgLink: 'assets/testImages/carOffice4.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 5',
-      imgLink: 'assets/images/carOffice5.png',
+      imgLink: 'assets/testImages/carOffice5.png',
       rate: 4,
       numberOfReservations: 200,
     ),
@@ -109,31 +109,31 @@ class RentalHome extends StatelessWidget {
   List<Office> busesOffices = [
     Office(
       name: 'Office 1',
-      imgLink: 'assets/images/carOffice1.png',
+      imgLink: 'assets/testImages/carOffice1.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 2',
-      imgLink: 'assets/images/carOffice2.png',
+      imgLink: 'assets/testImages/carOffice2.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 3',
-      imgLink: 'assets/images/carOffice3.png',
+      imgLink: 'assets/testImages/carOffice3.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 4',
-      imgLink: 'assets/images/carOffice4.png',
+      imgLink: 'assets/testImages/carOffice4.png',
       rate: 4,
       numberOfReservations: 200,
     ),
     Office(
       name: 'Office 5',
-      imgLink: 'assets/images/carOffice5.png',
+      imgLink: 'assets/testImages/carOffice5.png',
       rate: 4,
       numberOfReservations: 200,
     ),
@@ -153,22 +153,42 @@ class RentalHome extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                PrimaryButton(text: 'Previous Rental Requests', onClick: () {}),
-                SizedBox(height: 20.h),
-               HomeVerticalList(listTitle: AppLang.getLang(context: context).economic_cars,officeList: economicOffices,),
-                HomeVerticalList(listTitle: AppLang.getLang(context: context).electric_cars,officeList: electricOffices,),
-                HomeVerticalList(listTitle: AppLang.getLang(context: context).luxury_cars,officeList: luxuryOffices,),
-                HomeVerticalList(listTitle: AppLang.getLang(context: context).buses_and_public_transportation,officeList: busesOffices,),
-              ],
+      body: Stack(
+        children: [
+          Container(color: Colors.white),
+          SingleChildScrollView(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    PrimaryButton(text: 'Previous Rental Requests', onClick: () {}),
+                    SizedBox(height: 20.h),
+                    HomeVerticalList(
+                      listTitle: AppLang.getLang(context: context).economic_cars,
+                      officeList: economicOffices,
+                    ),
+                    HomeVerticalList(
+                      listTitle: AppLang.getLang(context: context).electric_cars,
+                      officeList: electricOffices,
+                    ),
+                    HomeVerticalList(
+                      listTitle: AppLang.getLang(context: context).luxury_cars,
+                      officeList: luxuryOffices,
+                    ),
+                    HomeVerticalList(
+                      listTitle:
+                          AppLang.getLang(
+                            context: context,
+                          ).buses_and_public_transportation,
+                      officeList: busesOffices,
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
