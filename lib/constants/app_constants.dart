@@ -12,6 +12,8 @@ class AppConstants {
   static const primaryColor=Color(0xff353392);
   ///used for text and may use as background code is #FFFFFF
   static const secondaryColor=Color(0xffffffff);
+  ///use as button background color code is #191292
+  static const secondaryColor2=Color(0xff191292);
   ///star background color 1 code is #F2CF63
   static const starColor=Color(0xfff2cf63);
   ///star background color 2 code is #2C2C2C
@@ -51,7 +53,8 @@ class AppConstants {
   static const hintTextColor2=Color(0xff4d4d4d);
   ///used for text hint color code is #858484
   static const hintTextColor3=Color(0xff858484);
-
+  ///used for text hint color code is #6C7278
+  static const hintTextColor4=Color(0xff6c7278);
   ///background color code is #1A1A1A
  static const backgroundColor1=Color(0xff1A1A1A);
   ///background color code is #2CB67D

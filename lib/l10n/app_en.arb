@@ -69,5 +69,15 @@
   "create_account":"Create account",
   "email":"Email",
   "card_holder_name":"card holder name ",
-  "successful_reservation":"Successful Reservation"
+  "successful_reservation":"Successful Reservation",
+  "send_btn":"Send",
+  "cancel_btn":"Cancel",
+  "a_4_digit_code_has_been_sent_to_your_email_please_enter_it_to_verify":"A 4-digit code has been sent to your email. Please enter it to verify.",
+  "code":"Code",
+  "verify_btn":"Verify",
+  "new_password":"New Password",
+  "value":"Value",
+  "confirm_new_password":"Confirm New Password",
+  "update_password":"Update Password"
+
 }

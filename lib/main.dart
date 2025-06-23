@@ -7,6 +7,10 @@ import 'package:ride_hub/controller/counter_controller.dart';
 import 'package:ride_hub/controller/gender_controller.dart';
 import 'package:ride_hub/controller/login_controller.dart';
 import 'package:ride_hub/controller/selection_controller.dart';
+import 'package:ride_hub/view/app_widgets/inputs/email_box.dart';
+import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
+import 'package:ride_hub/view/app_widgets/inputs/update_password_box.dart';
+import 'package:ride_hub/view/app_widgets/inputs/verify_box.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
 import 'package:ride_hub/view/screens/reservation_screen.dart';
 import 'package:ride_hub/view/screens/selection_screen.dart';
@@ -60,7 +64,12 @@ class MyApp extends StatelessWidget {
 
         );
       },
-      child:SignUpScreen(),
+      child:Scaffold(
+
+        body:Center(
+          child:LoginScreen(),
+        ),
+      ),
     );
   }
 }

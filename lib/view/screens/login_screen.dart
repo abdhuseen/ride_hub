@@ -7,6 +7,7 @@ import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/view/app_widgets/buttons/my_back_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
+import 'package:ride_hub/view/screens/forget_password_screen.dart';
 import 'package:ride_hub/view/screens/sign_up_screen.dart';
 import '../app_widgets/inputs/input_text.dart';
 
@@ -76,12 +77,13 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
 
-                      // email & password input fields
+                      // email & password input fields and forget password
                       Padding(
                         padding: EdgeInsets.only(
                             left: 24.w, right: 24.w, top: 50.h),
                         child: Column(
                           children: [
+                            //email input text
                             InputText(
                               hintText:
                               AppLang.getLang(context: context).email,
@@ -94,7 +96,8 @@ class LoginScreen extends StatelessWidget {
                               textInputType: TextInputType.emailAddress,
                               controller: emailController,
                             ),
-                            SizedBox(height: 24.h),
+                            SizedBox(height:24.h),
+                            //password input text
                             InputText(
                               hintText:
                               AppLang.getLang(context: context).password,
@@ -117,7 +120,11 @@ class LoginScreen extends StatelessWidget {
                                   TxtButton(
                                     text: AppLang.getLang(context: context)
                                         .forget_password,
-                                    onClick: () {},
+                                    onClick: () {
+                                      Navigator.push(context,
+                                      MaterialPageRoute(builder:(context) =>ForgetPasswordScreen(),)
+                                      );
+                                    },
                                     textStyle: GoogleFonts.mulish(
                                       color: AppConstants.secondaryTextColor7,
                                       fontSize: AppConstants.size8.sp,

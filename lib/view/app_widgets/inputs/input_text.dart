@@ -12,6 +12,7 @@ class InputText extends StatelessWidget {
   final TextEditingController? controller;
   final TextInputType textInputType;
   final bool isMini;
+  final bool isConfirmPassword;
 
    const InputText({
     super.key,
@@ -20,7 +21,8 @@ class InputText extends StatelessWidget {
     required this.textInputType,
     this.isPassword = false,
     this.controller,
-     this.isMini=false
+     this.isMini=false,
+     this.isConfirmPassword=false
 
   });
 
@@ -76,16 +78,27 @@ class InputText extends StatelessWidget {
               fontSize:AppConstants.size8,
               color:AppConstants.primaryTextColor2
           ),
-          decoration: InputDecoration(
+          decoration:InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 16.w),
             hintText: hintText,
             hintStyle: hintStyle,
             border: InputBorder.none,
-            suffixIcon: IconButton(
+            suffixIcon:IconButton(
               onPressed:(){
-                loginController.changePasswordVisibility();
+                if(isConfirmPassword==false){
+                  loginController.changePasswordVisibility();
+                }else{
+                  loginController.changeConfirmPasswordVisibility();
+                }
+
               },
-              icon:loginController.isObscure
+              icon:!isConfirmPassword?loginController.isObscure
+                  ? const Icon(Icons.visibility_off)
+                  : Image.asset(
+                "assets/icons/open_eye_icon.png",
+                width: 24.w,
+                height: 24.w,
+              ):loginController.isObscure2
                   ? const Icon(Icons.visibility_off)
                   : Image.asset(
                 "assets/icons/open_eye_icon.png",

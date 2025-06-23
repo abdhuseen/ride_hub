@@ -523,6 +523,61 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Successful Reservation'**
   String get successful_reservation;
+
+  /// No description provided for @send_btn.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get send_btn;
+
+  /// No description provided for @cancel_btn.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel_btn;
+
+  /// No description provided for @a_4_digit_code_has_been_sent_to_your_email_please_enter_it_to_verify.
+  ///
+  /// In en, this message translates to:
+  /// **'A 4-digit code has been sent to your email. Please enter it to verify.'**
+  String
+  get a_4_digit_code_has_been_sent_to_your_email_please_enter_it_to_verify;
+
+  /// No description provided for @code.
+  ///
+  /// In en, this message translates to:
+  /// **'Code'**
+  String get code;
+
+  /// No description provided for @verify_btn.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get verify_btn;
+
+  /// No description provided for @new_password.
+  ///
+  /// In en, this message translates to:
+  /// **'New Password'**
+  String get new_password;
+
+  /// No description provided for @value.
+  ///
+  /// In en, this message translates to:
+  /// **'Value'**
+  String get value;
+
+  /// No description provided for @confirm_new_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm New Password'**
+  String get confirm_new_password;
+
+  /// No description provided for @update_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Password'**
+  String get update_password;
 }
 
 class _AppLocalizationsDelegate

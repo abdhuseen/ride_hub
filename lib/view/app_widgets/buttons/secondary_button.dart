@@ -3,37 +3,39 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 
-class PrimaryButton extends StatelessWidget {
+class SecondaryButton extends StatelessWidget {
   final String text;
   final VoidCallback onClick;
-
-  const PrimaryButton({
+  int width;
+   SecondaryButton({
     super.key,
     required this.text,
     required this.onClick,
+    required this.width
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width:380.w,
-      height:58.h,
-      child: ElevatedButton(
+      width:width.w,
+      height:40.h,
+      child:ElevatedButton(
         onPressed:onClick,
         style: ElevatedButton.styleFrom(
-          backgroundColor:AppConstants.primaryColor,
+          backgroundColor:AppConstants.secondaryColor2,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.r),
+            borderRadius: BorderRadius.circular(8.r),
           ),
+          padding: EdgeInsets.zero,
         ),
         child:Text(
-          text,
-          style:GoogleFonts.mulish(
-              color:AppConstants.secondaryColor,
-              fontSize:AppConstants.size5.sp,
+            text,
+            style:GoogleFonts.inter(
+              color:AppConstants.secondaryTextColor10,
+              fontSize:AppConstants.size6.sp,
               fontWeight:FontWeight.w400,
-              height:1,
-          )
+              height:1
+            ),
         ),
       ),
     );

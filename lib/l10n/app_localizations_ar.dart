@@ -221,4 +221,33 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get successful_reservation => 'تم الحجز بنجاح';
+
+  @override
+  String get send_btn => 'إرسال';
+
+  @override
+  String get cancel_btn => 'إلغاء';
+
+  @override
+  String
+  get a_4_digit_code_has_been_sent_to_your_email_please_enter_it_to_verify =>
+      'تم إرسال رمز مكون من 4 أرقام إلى بريدك الإلكتروني. الرجاء إدخاله للتحقق.';
+
+  @override
+  String get code => 'الرمز';
+
+  @override
+  String get verify_btn => 'تحقق';
+
+  @override
+  String get new_password => 'كلمة المرور الجديدة';
+
+  @override
+  String get value => 'القيمة';
+
+  @override
+  String get confirm_new_password => 'تأكيد كلمة المرور الجديدة';
+
+  @override
+  String get update_password => 'تحديث كلمة المرور';
 }

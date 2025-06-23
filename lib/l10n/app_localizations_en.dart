@@ -223,4 +223,33 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get successful_reservation => 'Successful Reservation';
+
+  @override
+  String get send_btn => 'Send';
+
+  @override
+  String get cancel_btn => 'Cancel';
+
+  @override
+  String
+  get a_4_digit_code_has_been_sent_to_your_email_please_enter_it_to_verify =>
+      'A 4-digit code has been sent to your email. Please enter it to verify.';
+
+  @override
+  String get code => 'Code';
+
+  @override
+  String get verify_btn => 'Verify';
+
+  @override
+  String get new_password => 'New Password';
+
+  @override
+  String get value => 'Value';
+
+  @override
+  String get confirm_new_password => 'Confirm New Password';
+
+  @override
+  String get update_password => 'Update Password';
 }

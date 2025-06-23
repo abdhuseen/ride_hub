@@ -69,7 +69,16 @@
   "create_account":"إنشاء حساب",
   "email": "البريد الإلكتروني",
   "card_holder_name":"اسم صاحب البطاقة",
-  "successful_reservation": "تم الحجز بنجاح"
+  "successful_reservation": "تم الحجز بنجاح",
+  "send_btn": "إرسال",
+  "cancel_btn": "إلغاء",
+  "a_4_digit_code_has_been_sent_to_your_email_please_enter_it_to_verify": "تم إرسال رمز مكون من 4 أرقام إلى بريدك الإلكتروني. الرجاء إدخاله للتحقق.",
+  "code": "الرمز",
+  "verify_btn": "تحقق",
+  "new_password": "كلمة المرور الجديدة",
+  "value": "القيمة",
+  "confirm_new_password": "تأكيد كلمة المرور الجديدة",
+  "update_password": "تحديث كلمة المرور"
 
 
 
