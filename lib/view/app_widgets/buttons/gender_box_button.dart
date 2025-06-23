@@ -29,13 +29,15 @@ class GenderBoxButton extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            AppLang.getLang(context: context).gender,
-            style: GoogleFonts.mulish(
-              fontWeight: FontWeight.w400,
-              color: AppConstants.hintTextColor2,
-              fontSize: AppConstants.size8.sp,
-              height: 1,
+          FittedBox(
+            child:Text(
+              AppLang.getLang(context: context).gender,
+              style: GoogleFonts.mulish(
+                fontWeight: FontWeight.w400,
+                color: AppConstants.hintTextColor2,
+                fontSize: AppConstants.size8.sp,
+                height: 1,
+              ),
             ),
           ),
           SizedBox(width:10.w),
@@ -52,12 +54,14 @@ class GenderBoxButton extends StatelessWidget {
                   },
                   activeColor:AppConstants.primaryColor,
                 ),
-                Text(
-                  AppLang.getLang(context: context).male,
-                  style: GoogleFonts.mulish(
-                    fontWeight: FontWeight.w400,
-                    color: AppConstants.primaryTextColor,
-                    fontSize: AppConstants.size9.sp,
+                FittedBox(
+                  child:Text(
+                    AppLang.getLang(context: context).male,
+                    style: GoogleFonts.mulish(
+                      fontWeight: FontWeight.w400,
+                      color: AppConstants.primaryTextColor,
+                      fontSize: AppConstants.size9.sp,
+                    ),
                   ),
                 ),
                 SizedBox(width:10.w),
@@ -71,13 +75,15 @@ class GenderBoxButton extends StatelessWidget {
                   },
                   activeColor: AppConstants.primaryColor,
                 ),
-                Text(
-                  AppLang.getLang(context: context).female,
-                  style: GoogleFonts.mulish(
-                    fontWeight: FontWeight.w400,
-                    color: AppConstants.primaryTextColor,
-                    fontSize: AppConstants.size9.sp,
-                  ),
+                FittedBox(
+                  child: Text(
+                    AppLang.getLang(context: context).female,
+                    style: GoogleFonts.mulish(
+                      fontWeight: FontWeight.w400,
+                      color: AppConstants.primaryTextColor,
+                      fontSize: AppConstants.size9.sp,
+                    ),
+                ),
                 ),
               ],
             ),

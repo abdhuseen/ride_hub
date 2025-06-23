@@ -9,6 +9,7 @@ import 'package:ride_hub/controller/login_controller.dart';
 import 'package:ride_hub/controller/selection_controller.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
 import 'package:ride_hub/view/screens/reservation_screen.dart';
+import 'package:ride_hub/view/screens/selection_screen.dart';
 import 'package:ride_hub/view/screens/sign_up_screen.dart';
 import 'package:ride_hub/view/screens/successful_reservation_screen.dart';
 
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
 
         );
       },
-      child:SuccessfulReservationScreen(),
+      child:SignUpScreen(),
     );
   }
 }

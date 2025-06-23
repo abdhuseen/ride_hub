@@ -10,50 +10,63 @@ class SelectionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    SelectionController selectionController=Provider.of<SelectionController>(context,listen: false);
+    SelectionController selectionController =
+    Provider.of<SelectionController>(context, listen: false);
 
     return Scaffold(
-
-      body:Center(
-          child:Column(
-            children: [
-              //app logo image
-              Padding(padding:EdgeInsets.fromLTRB(33.w,152.h,33.w,0),
-                child:Image.asset("assets/images/app_logo.png",
-                  width:494.w,
-                  height:494.h,
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              child: Center(
+                child:ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: 500.w, // cap content width for tablets
+                  ),
+                  child:Column(
+                    mainAxisAlignment:MainAxisAlignment.center,
+                    children: [
+                      // app logo image
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: constraints.maxHeight > constraints.maxWidth
+                              ? 120.h
+                              : 60.h, // reduce top padding in landscape
+                        ),
+                        child: Image.asset(
+                          "assets/images/app_logo.png",
+                          width: 300.w,
+                          height: 300.w, // make it square
+                        ),
+                      ),
+                      // buy a car button
+                      Padding(
+                        padding: EdgeInsets.only(top: 36.h),
+                        child: PrimaryButton(
+                          text: AppLang.getLang(context: context).buy_a_car,
+                          onClick: () {
+                            selectionController.changeFlag(1);
+                          },
+                        ),
+                      ),
+                      // rent a car button
+                      Padding(
+                        padding: EdgeInsets.only(top: 24.h),
+                        child: PrimaryButton(
+                          text: AppLang.getLang(context: context).rental_a_car,
+                          onClick: () {
+                            selectionController.changeFlag(0);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              //buy a car button
-              Padding(padding:EdgeInsets.fromLTRB(57.w,27.h,57.w,0),
-                child:PrimaryButton(text:AppLang.getLang(context: context).buy_a_car, onClick:(){
-
-                  selectionController.changeFlag(1);
-
-                }),
-              ),
-              //rent a car button
-              Padding(padding:EdgeInsets.fromLTRB(57.w,27.h,57.w,0),
-                child:PrimaryButton(text:AppLang.getLang(context: context).rental_a_car, onClick:(){
-
-                  selectionController.changeFlag(0);
-
-                }),
-
-              )
-            ],
-          )
-
-
-
-      )
-
-
-
-
-
-
+            );
+          },
+        ),
+      ),
     );
   }
 }

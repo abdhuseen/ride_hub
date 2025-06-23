@@ -24,13 +24,15 @@ class UploadImageBox extends StatelessWidget {
       child:Row(
         mainAxisAlignment:MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-             hintText,
-             style: GoogleFonts.mulish(
-              fontWeight: FontWeight.w400,
-              color: AppConstants.hintTextColor2,
-              fontSize: AppConstants.size8.sp,
-              height: 1,
+          FittedBox(
+            child:Text(
+              hintText,
+              style: GoogleFonts.mulish(
+                fontWeight: FontWeight.w400,
+                color: AppConstants.hintTextColor2,
+                fontSize: AppConstants.size8.sp,
+                height: 1,
+              ),
             ),
           ),
           SizedBox(width:10.w),
