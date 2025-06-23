@@ -218,4 +218,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get card_holder_name => 'اسم صاحب البطاقة';
+
+  @override
+  String get successful_reservation => 'تم الحجز بنجاح';
 }

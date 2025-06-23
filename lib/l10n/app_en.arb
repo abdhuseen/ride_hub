@@ -68,6 +68,6 @@
   "female":"Female",
   "create_account":"Create account",
   "email":"Email",
-  "card_holder_name":"card holder name "
-
+  "card_holder_name":"card holder name ",
+  "successful_reservation":"Successful Reservation"
 }

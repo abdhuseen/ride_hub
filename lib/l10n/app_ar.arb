@@ -68,7 +68,9 @@
   "female": "أنثى",
   "create_account":"إنشاء حساب",
   "email": "البريد الإلكتروني",
-  "card_holder_name":"اسم صاحب البطاقة"
+  "card_holder_name":"اسم صاحب البطاقة",
+  "successful_reservation": "تم الحجز بنجاح"
+
 
 
 }

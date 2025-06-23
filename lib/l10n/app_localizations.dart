@@ -517,6 +517,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'card holder name '**
   String get card_holder_name;
+
+  /// No description provided for @successful_reservation.
+  ///
+  /// In en, this message translates to:
+  /// **'Successful Reservation'**
+  String get successful_reservation;
 }
 
 class _AppLocalizationsDelegate

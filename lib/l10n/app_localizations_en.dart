@@ -220,4 +220,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get card_holder_name => 'card holder name ';
+
+  @override
+  String get successful_reservation => 'Successful Reservation';
 }
