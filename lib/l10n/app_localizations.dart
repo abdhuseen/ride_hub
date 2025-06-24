@@ -263,13 +263,13 @@ abstract class AppLocalizations {
   /// No description provided for @car_license_image.
   ///
   /// In en, this message translates to:
-  /// **'Car license image'**
+  /// **' license image'**
   String get car_license_image;
 
   /// No description provided for @id_image.
   ///
   /// In en, this message translates to:
-  /// **'ID image'**
+  /// **'Id image'**
   String get id_image;
 
   /// No description provided for @create.
@@ -578,6 +578,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Update Password'**
   String get update_password;
+
+  /// No description provided for @license_image.
+  ///
+  /// In en, this message translates to:
+  /// **'License image'**
+  String get license_image;
+
+  /// No description provided for @front.
+  ///
+  /// In en, this message translates to:
+  /// **'Front'**
+  String get front;
+
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get back;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Photo'**
+  String get photo;
 }
 
 class _AppLocalizationsDelegate

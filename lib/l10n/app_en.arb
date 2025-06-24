@@ -26,7 +26,7 @@
   "full_name":"Full Name",
   "gender":"Gender",
   "age":"Age",
-  "car_license_image":"Car license image",
+  "car_license_image":" license image",
   "id_image":"ID image",
   "create":"Create",
   "have_account":"Have account?",
@@ -78,6 +78,12 @@
   "new_password":"New Password",
   "value":"Value",
   "confirm_new_password":"Confirm New Password",
-  "update_password":"Update Password"
+  "update_password":"Update Password",
+  "license_image":"License image",
+  "id_image":"Id image",
+  "front":"Front",
+  "back":"Back",
+  "done":"Done",
+  "photo":"Photo"
 
 }

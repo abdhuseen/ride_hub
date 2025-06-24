@@ -159,9 +159,9 @@ class SignUpScreen extends StatelessWidget {
                             left: 24.w, right: 24.w, top: 24.h),
                         child: SizedBox(
                           height: 56.h,
-                          child: UploadImageBox(
-                            hintText: AppLang.getLang(context: context)
-                                .car_license_image,
+                          child:UploadImageBox(
+                            hintText:AppLang.getLang(context: context).car_license_image,
+                             flag:1,
                           ),
                         ),
                       ),
@@ -174,6 +174,7 @@ class SignUpScreen extends StatelessWidget {
                           child: UploadImageBox(
                             hintText:
                             AppLang.getLang(context: context).id_image,
+                            flag:0,
                           ),
                         ),
                       ),

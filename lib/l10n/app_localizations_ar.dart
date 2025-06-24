@@ -91,7 +91,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get age => 'العمر';
 
   @override
-  String get car_license_image => 'صورة رخصة السيارة';
+  String get car_license_image => 'صورة رخصة القيادة ';
 
   @override
   String get id_image => 'صورة الهوية';
@@ -250,4 +250,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get update_password => 'تحديث كلمة المرور';
+
+  @override
+  String get license_image => 'صورة الرخصة';
+
+  @override
+  String get front => 'الصورة الأمامية';
+
+  @override
+  String get back => 'الصورة الخلفية';
+
+  @override
+  String get done => 'إنهاء';
+
+  @override
+  String get photo => 'الصورة';
 }

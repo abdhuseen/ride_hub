@@ -26,7 +26,7 @@
   "full_name": "الاسم الكامل",
   "gender": "الجنس",
   "age": "العمر",
-  "car_license_image": "صورة رخصة السيارة",
+  "car_license_image": "صورة رخصة القيادة ",
   "id_image": "صورة الهوية",
   "create": "إنشاء",
   "have_account": "لديك حساب؟",
@@ -78,7 +78,15 @@
   "new_password": "كلمة المرور الجديدة",
   "value": "القيمة",
   "confirm_new_password": "تأكيد كلمة المرور الجديدة",
-  "update_password": "تحديث كلمة المرور"
+  "update_password": "تحديث كلمة المرور",
+  "license_image": "صورة الرخصة",
+  "id_image": "صورة الهوية",
+  "front": "الصورة الأمامية",
+  "back": "الصورة الخلفية",
+  "done": "إنهاء",
+  "photo":"الصورة"
+
+
 
 
 

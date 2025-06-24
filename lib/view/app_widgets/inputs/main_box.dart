@@ -16,7 +16,7 @@ class MainBox extends StatelessWidget {
         borderRadius:BorderRadius.circular(8.r),
         border:Border.all(
           width:4,
-          color:AppConstants.primaryColor
+          color:AppConstants.secondaryColor2
         )
 
 

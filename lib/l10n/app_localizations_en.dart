@@ -92,10 +92,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get age => 'Age';
 
   @override
-  String get car_license_image => 'Car license image';
+  String get car_license_image => ' license image';
 
   @override
-  String get id_image => 'ID image';
+  String get id_image => 'Id image';
 
   @override
   String get create => 'Create';
@@ -252,4 +252,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get update_password => 'Update Password';
+
+  @override
+  String get license_image => 'License image';
+
+  @override
+  String get front => 'Front';
+
+  @override
+  String get back => 'Back';
+
+  @override
+  String get done => 'Done';
+
+  @override
+  String get photo => 'Photo';
 }
