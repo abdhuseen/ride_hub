@@ -52,9 +52,11 @@ class ReviewRentalScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Car Image
                   Center(
                     child: Image.asset(imageURL, width: 220.w, height: 107.h),
                   ),
+                  // Model & rental cost
                   Container(
                     width: 380.w,
                     height: 70.h,
@@ -82,6 +84,7 @@ class ReviewRentalScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 25.h),
+                  // Review box
                   SizedBox(
                     width: 480.w,
                     height: 700.h,
@@ -103,6 +106,7 @@ class ReviewRentalScreen extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                // Stars
                                 SizedBox(
                                   width: 150.w,
                                   height: 50.h,
@@ -115,6 +119,7 @@ class ReviewRentalScreen extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(height: 10),
+                                // Review
                                 BaseText(
                                   text: review[index].review,
                                   fontSize: AppConstants.size6.sp,
@@ -122,6 +127,7 @@ class ReviewRentalScreen extends StatelessWidget {
                                   textColor: AppConstants.primaryTextColor,
                                 ),
                                 SizedBox(height: 20),
+                                // Reviewer name
                                 BaseText(
                                   text: review[index].name,
                                   fontSize: AppConstants.size6.sp,
@@ -129,6 +135,7 @@ class ReviewRentalScreen extends StatelessWidget {
                                   textColor: Color.fromARGB(150, 117, 117, 117),
                                 ),
                                 SizedBox(height: 5),
+                                // Date
                                 BaseText(
                                   text: review[index].date,
                                   fontSize: AppConstants.size6.sp,
@@ -146,6 +153,8 @@ class ReviewRentalScreen extends StatelessWidget {
               ),
             ),
           ),
+
+          // Book Now button
           Container(
             margin: EdgeInsets.only(top: 690.h, left: 30, right: 30),
             child: PrimaryButton(

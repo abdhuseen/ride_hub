@@ -29,7 +29,9 @@ class RentalImagesScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Main car image
                   Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  // Car Model & rental cost
                   Container(
                     width: 380.w,
                     height: 70.h,
@@ -57,6 +59,7 @@ class RentalImagesScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 25.h),
+                  // Car Images
                   SizedBox(
                     width: 480.w,
                     height: 700.h,
@@ -73,9 +76,11 @@ class RentalImagesScreen extends StatelessWidget {
               ),
             ),
           ),
+
+          // Book Now Button
           Container(
               margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
-              child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){}))
+              child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){})),
         ],
       ),
     );

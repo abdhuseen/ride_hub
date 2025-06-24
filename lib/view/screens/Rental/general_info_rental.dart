@@ -29,6 +29,7 @@ class GeneralInfoRental extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          // Image & general info
           SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.only(
@@ -40,7 +41,9 @@ class GeneralInfoRental extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Image
                   Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  // Model & Rental cost
                   Container(
                     width: 380.w,
                     height: 70.h,
@@ -52,12 +55,14 @@ class GeneralInfoRental extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // Model
                         BaseText(
                           text: model,
                           fontSize: AppConstants.size5.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
                         ),
+                        // Rental cost
                         BaseText(
                           text: '$rentalCost JD/day',
                           fontSize: AppConstants.size8.sp,
@@ -68,6 +73,7 @@ class GeneralInfoRental extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 15.h),
+                  // Mileage & Seat Capacity
                   Container(
                     width: 380.w,
                     height: 100.h,
@@ -82,6 +88,7 @@ class GeneralInfoRental extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Mileage
                         Row(
                           children: [
                             BaseText(
@@ -100,6 +107,7 @@ class GeneralInfoRental extends StatelessWidget {
                         ),
 
                         SizedBox(height: 5.h),
+                        // Seat Capacity
                         Row(
                           children: [
                             BaseText(
@@ -121,6 +129,7 @@ class GeneralInfoRental extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20.h),
+                  // General Information title
                   BaseText(
                     text: 'General Information',
                     fontSize: AppConstants.size5.sp,
@@ -128,6 +137,7 @@ class GeneralInfoRental extends StatelessWidget {
                     textColor: AppConstants.primaryTextColor,
                   ),
                   SizedBox(height: 5.h),
+                  // General Information
                   Container(
                     width: 380.w,
                     height: 250.h,
@@ -151,6 +161,8 @@ class GeneralInfoRental extends StatelessWidget {
               ),
             ),
           ),
+
+          // Book Now button
           Container(
               margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
               child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){}))

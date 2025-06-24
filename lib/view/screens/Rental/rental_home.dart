@@ -165,6 +165,7 @@ class RentalHome extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
                   children: [
+                    // Previous Rental Requests button
                     PrimaryButton(text: 'Previous Rental Requests', onClick: () {
                       if(login == true){
                         Navigator.push(context,MaterialPageRoute(builder: (context)=>PreviousRentalRequests()));
@@ -173,18 +174,22 @@ class RentalHome extends StatelessWidget {
                       }
                     }),
                     SizedBox(height: 20.h),
+                    // Econmic car
                     HomeVerticalList(
                       listTitle: AppLang.getLang(context: context).economic_cars,
                       officeList: economicOffices,
                     ),
+                    // electric car
                     HomeVerticalList(
                       listTitle: AppLang.getLang(context: context).electric_cars,
                       officeList: electricOffices,
                     ),
+                    // Luxury car
                     HomeVerticalList(
                       listTitle: AppLang.getLang(context: context).luxury_cars,
                       officeList: luxuryOffices,
                     ),
+                    // Busses
                     HomeVerticalList(
                       listTitle:
                           AppLang.getLang(

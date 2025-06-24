@@ -61,12 +61,14 @@ class SeeAllScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      // office image
                       Image.asset(
                         officeList[index].imgLink,
                         width: 48.w,
                         height: 48.h,
                       ),
                       SizedBox(height: 20.h),
+                      // office name
                       BaseText(
                         text: officeList[index].name,
                         fontSize: AppConstants.size8.sp,
@@ -74,6 +76,7 @@ class SeeAllScreen extends StatelessWidget {
                         textColor: AppConstants.primaryTextColor,
                       ),
                       SizedBox(height: 10.h),
+                      // rate
                       BaseText(
                         text: officeList[index].rate.toString(),
                         fontSize: AppConstants.size8.sp,
@@ -81,6 +84,7 @@ class SeeAllScreen extends StatelessWidget {
                         textColor: AppConstants.primaryColor,
                       ),
                       SizedBox(height: 5.h),
+                      // reservation namber
                       BaseText(
                         text: officeList[index].numberOfReservations.toString(),
                         fontSize: AppConstants.size8.sp,

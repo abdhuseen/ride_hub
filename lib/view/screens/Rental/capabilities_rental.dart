@@ -37,6 +37,7 @@ class CapabilitiesRental extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          // image & capabilities
           SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.only(
@@ -48,7 +49,9 @@ class CapabilitiesRental extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Car Image
                   Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  // Model & rental cost
                   Container(
                     width: 380.w,
                     height: 70.h,
@@ -60,12 +63,14 @@ class CapabilitiesRental extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // Model
                         BaseText(
                           text: model,
                           fontSize: AppConstants.size5.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
                         ),
+                        // Rental Cost
                         BaseText(
                           text: '$rentalCost JD/day',
                           fontSize: AppConstants.size8.sp,
@@ -76,6 +81,7 @@ class CapabilitiesRental extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 25.h),
+                  // Capabilities
                   Container(
                     width: 380.w,
                     height: 400.h,
@@ -90,6 +96,7 @@ class CapabilitiesRental extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Engine Option
                         BaseText(
                           text: '* Engine Option:',
                           fontSize: AppConstants.size6.sp,
@@ -103,6 +110,7 @@ class CapabilitiesRental extends StatelessWidget {
                           textColor: AppConstants.primaryTextColor,
                         ),
                         SizedBox(height: 15.h),
+                        // Hours Power
                         BaseText(
                           text: '* Hours Power:',
                           fontSize: AppConstants.size6.sp,
@@ -122,6 +130,8 @@ class CapabilitiesRental extends StatelessWidget {
               ),
             ),
           ),
+
+          // Book Now Button
           Container(
               margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
               child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){}))

@@ -78,9 +78,12 @@ class OfficeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Office Logo
                   Center(
                     child: Image.asset(imageLink, width: 251.w, height: 212.h),
                   ),
+
+                  // Rate Number
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Row(
@@ -100,6 +103,8 @@ class OfficeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                  // number of reservation
                   Padding(
                     padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Row(
@@ -120,6 +125,8 @@ class OfficeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                  // our cars title
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: BaseText(
@@ -130,6 +137,7 @@ class OfficeScreen extends StatelessWidget {
                     ),
                   ),
 
+                  // Car Cards
                   SizedBox(
                     width: 428.w,
                     height: 500.h,
@@ -175,12 +183,14 @@ class OfficeScreen extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                // car image
                                 Image.asset(
                                   economicCars[index].imagesLinks[0],
                                   width: 161.w,
                                   height: 52.h,
                                 ),
                                 SizedBox(height: 20.h),
+                                // Car name
                                 BaseText(
                                   text: economicCars[index].name,
                                   fontSize: AppConstants.size8.sp,
@@ -188,6 +198,7 @@ class OfficeScreen extends StatelessWidget {
                                   textColor: AppConstants.primaryTextColor,
                                 ),
                                 SizedBox(height: 10.h),
+                                // year
                                 BaseText(
                                   text: economicCars[index].year.toString(),
                                   fontSize: AppConstants.size8.sp,
@@ -195,6 +206,7 @@ class OfficeScreen extends StatelessWidget {
                                   textColor: AppConstants.primaryColor,
                                 ),
                                 SizedBox(height: 5.h),
+                                // rent cost
                                 BaseText(
                                   text:
                                       '${economicCars[index].rentCost.toString()} ${AppLang.getLang(context: context).jd_day}',
