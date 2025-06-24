@@ -10,6 +10,8 @@ class GeneralInfoRental extends StatelessWidget {
   String model;
   double rentalCost;
   String generalInfo;
+  double mileage;
+  int seatCapacity;
 
   GeneralInfoRental({
     super.key,
@@ -17,6 +19,8 @@ class GeneralInfoRental extends StatelessWidget {
     required this.generalInfo,
     required this.model,
     required this.rentalCost,
+    required this.mileage,
+    required this.seatCapacity,
   });
 
   @override
@@ -63,10 +67,70 @@ class GeneralInfoRental extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 25.h),
+                  SizedBox(height: 15.h),
                   Container(
                     width: 380.w,
-                    height: 400.h,
+                    height: 100.h,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(20, 53, 51, 146),
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        bottomLeft: Radius.circular(20),
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            BaseText(
+                              text: '* Mileage:',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                            BaseText(
+                              text: '  $mileage km balance',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                          ],
+                        ),
+
+                        SizedBox(height: 5.h),
+                        Row(
+                          children: [
+                            BaseText(
+                              text: '* Seat Capacity:',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                            BaseText(
+                              text: '  $seatCapacity seat',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                          ],
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20.h),
+                  BaseText(
+                    text: 'General Information',
+                    fontSize: AppConstants.size5.sp,
+                    FontFamily: 'Mulish-Bold',
+                    textColor: AppConstants.primaryTextColor,
+                  ),
+                  SizedBox(height: 5.h),
+                  Container(
+                    width: 380.w,
+                    height: 250.h,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Color.fromARGB(20, 53, 51, 146),

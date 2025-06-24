@@ -211,4 +211,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get female => 'Female';
+
+  @override
+  String get previous_rental_requests => 'Previous Rental Requests';
+
+  @override
+  String get accept => 'Accept';
+
+  @override
+  String get reject => 'Reject';
 }

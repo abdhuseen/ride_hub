@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/model/reviews_model.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/base_text.dart';
 
@@ -9,7 +10,30 @@ class ReviewRentalScreen extends StatelessWidget {
   String imageURL;
   String model;
   double rentalCost;
-  ReviewRentalScreen({super.key,required this.model,required this.imageURL,required this.rentalCost,});
+
+  ReviewRentalScreen({
+    super.key,
+    required this.model,
+    required this.imageURL,
+    required this.rentalCost,
+  });
+
+  List<ReviewsModel> review = [
+    ReviewsModel(
+      name: 'User 1',
+      review:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s',
+      date: '25/5/2025',
+      starNumber: 3,
+    ),
+    ReviewsModel(
+      name: 'User 2',
+      review:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s',
+      date: '25/6/2025',
+      starNumber: 5,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +52,9 @@ class ReviewRentalScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  Center(
+                    child: Image.asset(imageURL, width: 220.w, height: 107.h),
+                  ),
                   Container(
                     width: 380.w,
                     height: 70.h,
@@ -57,57 +83,76 @@ class ReviewRentalScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 25.h),
                   SizedBox(
-                      width: 480.w,
-                      height: 700.h,
+                    width: 480.w,
+                    height: 700.h,
 
-                      child: ListView.builder(
-                          itemCount: 2,
-                          itemBuilder: (context,index){
-                            return Container(
-                                margin: EdgeInsets.only(bottom: 20),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                    color: Color.fromARGB(100, 217, 217, 217),
-                                    width: 1,
-                                  )
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Icon(Icons.star_border,size: 20.sp,),
-                                          SizedBox(width: 5),
-                                          Icon(Icons.star_border,size: 20.sp,),
-                                          SizedBox(width: 5),
-                                          Icon(Icons.star_border,size: 20.sp,),
-                                          SizedBox(width: 5),
-                                          Icon(Icons.star_border,size: 20.sp,),
-                                          SizedBox(width: 5),
-                                        ],
-                                      ),
-                                      SizedBox(height: 10),
-                                      BaseText(text: 'Lorem ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.', fontSize: AppConstants.size6.sp, FontFamily: '', textColor: AppConstants.primaryTextColor),
-                                      SizedBox(height: 20),
-                                      BaseText(text: 'Reviewer Name', fontSize: AppConstants.size6.sp, FontFamily: '', textColor: Color.fromARGB(150, 117, 117, 117)),
-                                      SizedBox(height: 5),
-                                      BaseText(text: 'Date', fontSize: AppConstants.size6.sp, FontFamily: '', textColor: Color.fromARGB(120, 117, 117, 117)),
-
-                                    ],
+                    child: ListView.builder(
+                      itemCount: review.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: EdgeInsets.only(bottom: 15.h),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Color.fromARGB(100, 217, 217, 217),
+                              width: 1,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 150.w,
+                                  height: 50.h,
+                                  child: ListView.builder(
+                                    itemBuilder: (context, index) {
+                                      return Icon(Icons.star_border);
+                                    },
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: review[index].starNumber,
                                   ),
-                                ));
-                          })
+                                ),
+                                SizedBox(height: 10),
+                                BaseText(
+                                  text: review[index].review,
+                                  fontSize: AppConstants.size6.sp,
+                                  FontFamily: '',
+                                  textColor: AppConstants.primaryTextColor,
+                                ),
+                                SizedBox(height: 20),
+                                BaseText(
+                                  text: review[index].name,
+                                  fontSize: AppConstants.size6.sp,
+                                  FontFamily: '',
+                                  textColor: Color.fromARGB(150, 117, 117, 117),
+                                ),
+                                SizedBox(height: 5),
+                                BaseText(
+                                  text: review[index].date,
+                                  fontSize: AppConstants.size6.sp,
+                                  FontFamily: '',
+                                  textColor: Color.fromARGB(120, 117, 117, 117),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),
             ),
           ),
           Container(
-              margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
-              child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){}))
+            margin: EdgeInsets.only(top: 690.h, left: 30, right: 30),
+            child: PrimaryButton(
+              text: AppLang.getLang(context: context).book_now,
+              onClick: () {},
+            ),
+          ),
         ],
       ),
     );

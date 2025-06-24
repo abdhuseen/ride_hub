@@ -35,7 +35,7 @@ class AppConstants {
   ///used for text color code is  #525252
   static const secondaryTextColor7=Color(0xff525252);
   ///used for text color code also hint color is  #666666
-  static const secondaryTextColor8=Color(0xff666666);
+                                                                                                                                                                                                                      static const secondaryTextColor8=Color(0xff666666);
   ///used for text color code is   #303030
   static const secondaryTextColor9=Color(0xff303030);
   ///used for text color code is    #F5F5F5

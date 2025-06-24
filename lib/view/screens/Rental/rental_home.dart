@@ -6,6 +6,8 @@ import 'package:ride_hub/model/office.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/home_vertical_list.dart';
 import 'package:ride_hub/view/app_widgets/inputs/base_text.dart';
+import 'package:ride_hub/view/screens/Rental/previous_rental_requests.dart';
+import 'package:ride_hub/view/screens/login_screen.dart';
 
 class RentalHome extends StatelessWidget {
   RentalHome({super.key});
@@ -141,6 +143,7 @@ class RentalHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool login = true;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppConstants.primaryColor,
@@ -162,7 +165,13 @@ class RentalHome extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
                   children: [
-                    PrimaryButton(text: 'Previous Rental Requests', onClick: () {}),
+                    PrimaryButton(text: 'Previous Rental Requests', onClick: () {
+                      if(login == true){
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>PreviousRentalRequests()));
+                      }else{
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                      }
+                    }),
                     SizedBox(height: 20.h),
                     HomeVerticalList(
                       listTitle: AppLang.getLang(context: context).economic_cars,

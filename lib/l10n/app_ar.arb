@@ -65,5 +65,8 @@
   "summary_of_your_experience": "ملخص تجربتك",
   "submit": "إرسال",
   "male": "ذكر",
-  "female": "أنثى"
+  "female": "أنثى",
+  "previous_rental_requests" : "طلبات الإيجار السابقة",
+  "accept" : "مقبول",
+  "reject" : "مرفوض"
 }

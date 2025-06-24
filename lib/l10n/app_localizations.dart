@@ -499,6 +499,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Female'**
   String get female;
+
+  /// No description provided for @previous_rental_requests.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous Rental Requests'**
+  String get previous_rental_requests;
+
+  /// No description provided for @accept.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get accept;
+
+  /// No description provided for @reject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get reject;
 }
 
 class _AppLocalizationsDelegate

@@ -9,14 +9,26 @@ class CapabilitiesRental extends StatelessWidget {
   String imageURL;
   String model;
   double rentalCost;
-  String capabilities;
+  // capabilities
+  String engineType;
+  double engineCapacity;
+  int hoursPower;
+  String fuel;
+  //general
+  int seatCapacity;
+  double mileage;
 
   CapabilitiesRental({
     super.key,
     required this.imageURL,
     required this.rentalCost,
     required this.model,
-    required this.capabilities,
+    required this.seatCapacity,
+    required this.mileage,
+    required this.fuel,
+    required this.hoursPower,
+    required this.engineType,
+    required this.engineCapacity,
   });
 
   @override
@@ -75,11 +87,35 @@ class CapabilitiesRental extends StatelessWidget {
                         bottomLeft: Radius.circular(20),
                       ),
                     ),
-                    child: BaseText(
-                      text: capabilities,
-                      fontSize: AppConstants.size6.sp,
-                      FontFamily: 'Mulish-Bold',
-                      textColor: AppConstants.primaryTextColor,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        BaseText(
+                          text: '* Engine Option:',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        BaseText(
+                          text: '  $engineCapacity L\n  $engineType',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        SizedBox(height: 15.h),
+                        BaseText(
+                          text: '* Hours Power:',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        BaseText(
+                          text: '  $hoursPower hp',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                      ],
                     ),
                   ),
                 ],

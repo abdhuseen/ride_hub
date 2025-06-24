@@ -4,7 +4,7 @@ import 'package:ride_hub/constants/app_constants.dart';
 
 class BaseText extends StatelessWidget {
   String text;
-  Color textColor;
+ var textColor;
   String FontFamily;
   double fontSize;
 
@@ -13,7 +13,7 @@ class BaseText extends StatelessWidget {
     required this.text,
     required this.fontSize,
     required this.FontFamily,
-    required this.textColor,
+    this.textColor,
   });
 
   @override

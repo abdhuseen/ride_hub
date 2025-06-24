@@ -209,4 +209,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get female => 'أنثى';
+
+  @override
+  String get previous_rental_requests => 'طلبات الإيجار السابقة';
+
+  @override
+  String get accept => 'مقبول';
+
+  @override
+  String get reject => 'مرفوض';
 }
