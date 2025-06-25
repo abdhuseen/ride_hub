@@ -1,15 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ride_hub/view/screens/upload_image_screen.dart';
 
 import '../../../constants/app_constants.dart';
 import '../../../constants/app_lang.dart';
-
+/// hint with upload button and from it specify the photo for id or license
 class UploadImageBox extends StatelessWidget {
   String hintText;
-
-   UploadImageBox({super.key,required this.hintText});
+  int flag;
+   UploadImageBox({super.key,required this.hintText,required this.flag});
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +37,11 @@ class UploadImageBox extends StatelessWidget {
           ),
           SizedBox(width:10.w),
           IconButton(onPressed:(){
+            //upload  photos, flag 0 for id, 1 for license
+            Navigator.push(context,MaterialPageRoute(builder:(context) =>UploadImageScreen(title:flag==1?AppLang.getLang(context: context).license_image:
+                AppLang.getLang(context: context).id_image
+                , flag:flag),));
+
 
           }, icon:Icon(Icons.upload_file,),
           )

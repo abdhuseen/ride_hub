@@ -4,12 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/controller/counter_controller.dart';
+import 'package:ride_hub/controller/error_text_controller.dart';
 import 'package:ride_hub/controller/gender_controller.dart';
 import 'package:ride_hub/controller/login_controller.dart';
 import 'package:ride_hub/controller/selection_controller.dart';
+import 'package:ride_hub/controller/upload_image_controller.dart';
 import 'package:ride_hub/view/app_widgets/inputs/email_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/update_password_box.dart';
+import 'package:ride_hub/view/app_widgets/inputs/upload_photo_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/verify_box.dart';
 import 'package:ride_hub/view/screens/home_view.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
@@ -42,10 +45,16 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create:(context) => LoginController(),),
           ChangeNotifierProvider(create:(context) =>GenderController(),),
           ChangeNotifierProvider(create:(context) =>CounterController(),),
+<<<<<<< car
           ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),
           ),
           ChangeNotifierProvider(create: (context) => CarController()),
           ChangeNotifierProvider(create: (context) => FilterController()),
+=======
+          ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),),
+          ChangeNotifierProvider(create:(context) =>UploadImageController(),),
+          ChangeNotifierProvider(create:(context) =>ErrorTextController(),),
+>>>>>>> master
 
 
         ],
@@ -72,12 +81,7 @@ class MyApp extends StatelessWidget {
 
         );
       },
-      child:Scaffold(
-
-        body:Center(
-          child:LoginScreen(),
-        ),
-      ),
+      child:LoginScreen()
     );
   }
 }

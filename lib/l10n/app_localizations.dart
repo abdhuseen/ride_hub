@@ -263,13 +263,13 @@ abstract class AppLocalizations {
   /// No description provided for @car_license_image.
   ///
   /// In en, this message translates to:
-  /// **'Car license image'**
+  /// **' license image'**
   String get car_license_image;
 
   /// No description provided for @id_image.
   ///
   /// In en, this message translates to:
-  /// **'ID image'**
+  /// **'Id image'**
   String get id_image;
 
   /// No description provided for @create.
@@ -579,11 +579,169 @@ abstract class AppLocalizations {
   /// **'Update Password'**
   String get update_password;
 
+<<<<<<< car
   /// No description provided for @general_information.
   ///
   /// In en, this message translates to:
   /// **'General Information'**
   String get general_information;
+=======
+  /// No description provided for @license_image.
+  ///
+  /// In en, this message translates to:
+  /// **'License image'**
+  String get license_image;
+
+  /// No description provided for @front.
+  ///
+  /// In en, this message translates to:
+  /// **'Front'**
+  String get front;
+
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get back;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Photo'**
+  String get photo;
+
+  /// No description provided for @empty_field_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'Empty Field Here Not Allowed'**
+  String get empty_field_error_msg;
+
+  /// No description provided for @incorrect_email_or_password_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'Either email or password is incorrect'**
+  String get incorrect_email_or_password_error_msg;
+
+  /// No description provided for @email_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'example@example.com'**
+  String get email_valid_format_error_msg;
+
+  /// No description provided for @password_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'your password must be at least \n 1-8 Characters \n 2-one capital litter\n3-one number\n4-one symbol(@,_,\$))'**
+  String get password_valid_format_error_msg;
+
+  /// No description provided for @phone_number_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'your phone must be 009627(7 OR 8 OR 9)XXXXXXX'**
+  String get phone_number_valid_format_error_msg;
+
+  /// No description provided for @full_name_or_card_holder_name_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'only litters allowed here'**
+  String get full_name_or_card_holder_name_valid_format_error_msg;
+
+  /// No description provided for @gender_valid_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'You select a gender'**
+  String get gender_valid_error_msg;
+
+  /// No description provided for @age_valid_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'allowed ages from 18 and above'**
+  String get age_valid_error_msg;
+
+  /// No description provided for @id_front_image_valid_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'must be upload id front image'**
+  String get id_front_image_valid_error_msg;
+
+  /// No description provided for @id_back_image_valid_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'must be upload id back image'**
+  String get id_back_image_valid_error_msg;
+
+  /// No description provided for @license_front_image_valid_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'must be upload license front image'**
+  String get license_front_image_valid_error_msg;
+
+  /// No description provided for @license_back_image_valid_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'must be upload license back image'**
+  String get license_back_image_valid_error_msg;
+
+  /// No description provided for @card_number_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'your card must be consist of 14 digit'**
+  String get card_number_valid_format_error_msg;
+
+  /// No description provided for @expriy_date_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'Expriy date format MM/YY ,example:(06/23)'**
+  String get expriy_date_valid_format_error_msg;
+
+  /// No description provided for @cvv_valid_format_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'CVV format is 3 or 4-digits '**
+  String get cvv_valid_format_error_msg;
+
+  /// No description provided for @email_not_found_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'email not found'**
+  String get email_not_found_error_msg;
+
+  /// No description provided for @incorrect_otp_code_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect OTP Code'**
+  String get incorrect_otp_code_error_msg;
+
+  /// No description provided for @password_and_confirm_password_are_not_equal_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'Password and confirm password are not equals'**
+  String get password_and_confirm_password_are_not_equal_error_msg;
+
+  /// No description provided for @email_is_used_before_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'this email used by another user'**
+  String get email_is_used_before_error_msg;
+
+  /// No description provided for @phone_number_is_used_before_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'this phone number used by another user'**
+  String get phone_number_is_used_before_error_msg;
+
+  /// No description provided for @incorrect_visa_card_data_error_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect Visa Card Data'**
+  String get incorrect_visa_card_data_error_msg;
+>>>>>>> master
 }
 
 class _AppLocalizationsDelegate

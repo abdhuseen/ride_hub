@@ -91,7 +91,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get age => 'العمر';
 
   @override
-  String get car_license_image => 'صورة رخصة السيارة';
+  String get car_license_image => 'صورة رخصة القيادة ';
 
   @override
   String get id_image => 'صورة الهوية';
@@ -252,5 +252,98 @@ class AppLocalizationsAr extends AppLocalizations {
   String get update_password => 'تحديث كلمة المرور';
 
   @override
+<<<<<<< car
   String get general_information => 'معلومات عامه';
+=======
+  String get license_image => 'صورة الرخصة';
+
+  @override
+  String get front => 'الصورة الأمامية';
+
+  @override
+  String get back => 'الصورة الخلفية';
+
+  @override
+  String get done => 'إنهاء';
+
+  @override
+  String get photo => 'الصورة';
+
+  @override
+  String get empty_field_error_msg => 'لا يمكن ترك الحقل فارغًا';
+
+  @override
+  String get incorrect_email_or_password_error_msg =>
+      'البريد الإلكتروني أو كلمة المرور غير صحيحة';
+
+  @override
+  String get email_valid_format_error_msg => 'example@example.com';
+
+  @override
+  String get password_valid_format_error_msg =>
+      'يجب أن تتكون كلمة المرور من:\n1- من 8 أحرف على الأقل\n2- حرف كبير واحد\n3- رقم واحد\n4- رمز واحد (@، _، \$)';
+
+  @override
+  String get phone_number_valid_format_error_msg =>
+      'يجب أن يكون رقم الهاتف 009627(7 أو 8 أو 9)XXXXXXX';
+
+  @override
+  String get full_name_or_card_holder_name_valid_format_error_msg =>
+      'يسمح فقط بالأحرف هنا';
+
+  @override
+  String get gender_valid_error_msg => 'يجب اختيار الجنس';
+
+  @override
+  String get age_valid_error_msg => 'الأعمار المسموح بها من 18 فما فوق';
+
+  @override
+  String get id_front_image_valid_error_msg =>
+      'يجب تحميل صورة هوية الجهة الأمامية';
+
+  @override
+  String get id_back_image_valid_error_msg =>
+      'يجب تحميل صورة هوية الجهة الخلفية';
+
+  @override
+  String get license_front_image_valid_error_msg =>
+      'يجب تحميل صورة رخصة القيادة الأمامية';
+
+  @override
+  String get license_back_image_valid_error_msg =>
+      'يجب تحميل صورة رخصة القيادة الخلفية';
+
+  @override
+  String get card_number_valid_format_error_msg =>
+      'يجب أن يتكون رقم البطاقة من 14 رقمًا';
+
+  @override
+  String get expriy_date_valid_format_error_msg =>
+      'تنسيق تاريخ الانتهاء MM/YY، example: (06/23)';
+
+  @override
+  String get cvv_valid_format_error_msg => 'يجب أن يتكون CVV من 3 أو 4 أرقام';
+
+  @override
+  String get email_not_found_error_msg => 'البريد الإلكتروني غير موجود';
+
+  @override
+  String get incorrect_otp_code_error_msg => 'رمز التحقق OTP غير صحيح';
+
+  @override
+  String get password_and_confirm_password_are_not_equal_error_msg =>
+      'كلمة المرور وتأكيد كلمة المرور غير متطابقين';
+
+  @override
+  String get email_is_used_before_error_msg =>
+      'تم استخدام هذا البريد الإلكتروني من قبل';
+
+  @override
+  String get phone_number_is_used_before_error_msg =>
+      'تم استخدام رقم الهاتف هذا من قبل';
+
+  @override
+  String get incorrect_visa_card_data_error_msg =>
+      'بيانات بطاقة الفيزا غير صحيحة';
+>>>>>>> master
 }

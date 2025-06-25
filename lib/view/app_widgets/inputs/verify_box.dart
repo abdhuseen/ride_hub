@@ -8,6 +8,7 @@ import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
 import 'package:ride_hub/view/screens/update_password_screen.dart';
+import '../../../controller/error_text_controller.dart';
 import 'input_text.dart';
 
 class VerifyBox extends StatelessWidget {
@@ -54,8 +55,26 @@ class VerifyBox extends StatelessWidget {
           //verify button
             Center(
               child:SecondaryButton(text:AppLang.getLang(context: context).verify_btn, onClick:(){
+                //get data
+                String userOTP=otpController.text.trim();
+                //check validity
+                if(userOTP.isNotEmpty){
+                  //get server OTP and check it with the user entered OTP
+                  String serverOTP="1234";//will get from api
+                  if(userOTP==serverOTP){
+                    Navigator.push(context,MaterialPageRoute(builder:(context) =>UpdatePasswordScreen(),));
 
-                Navigator.push(context,MaterialPageRoute(builder:(context) =>UpdatePasswordScreen(),));
+                  }else{
+                    print("wrong OTP");
+                  }
+
+                }else{
+                  print("invalid empty OTP");
+                }
+
+
+
+
 
               },width:68),
             )

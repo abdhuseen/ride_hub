@@ -26,7 +26,7 @@
   "full_name":"Full Name",
   "gender":"Gender",
   "age":"Age",
-  "car_license_image":"Car license image",
+  "car_license_image":" license image",
   "id_image":"ID image",
   "create":"Create",
   "have_account":"Have account?",
@@ -79,6 +79,36 @@
   "value":"Value",
   "confirm_new_password":"Confirm New Password",
   "update_password":"Update Password",
+<<<<<<< car
   "general_information": "General Information"
+=======
+  "license_image":"License image",
+  "id_image":"Id image",
+  "front":"Front",
+  "back":"Back",
+  "done":"Done",
+  "photo":"Photo",
+>>>>>>> master
 
+  "empty_field_error_msg":"Empty Field Here Not Allowed",
+  "incorrect_email_or_password_error_msg":"Either email or password is incorrect",
+  "email_valid_format_error_msg":"example@example.com",
+  "password_valid_format_error_msg":"your password must be at least \n 1-8 Characters \n 2-one capital litter\n3-one number\n4-one symbol(@,_,$))",
+  "phone_number_valid_format_error_msg":"your phone must be 009627(7 OR 8 OR 9)XXXXXXX",
+  "full_name_or_card_holder_name_valid_format_error_msg":"only litters allowed here",
+  "gender_valid_error_msg":"You select a gender",
+  "age_valid_error_msg":"allowed ages from 18 and above",
+  "id_front_image_valid_error_msg":"must be upload id front image",
+  "id_back_image_valid_error_msg":"must be upload id back image",
+  "license_front_image_valid_error_msg":"must be upload license front image",
+  "license_back_image_valid_error_msg":"must be upload license back image",
+  "card_number_valid_format_error_msg":"your card must be consist of 14 digit",
+  "expriy_date_valid_format_error_msg":"Expriy date format MM/YY ,example:(06/23)",
+  "cvv_valid_format_error_msg":"CVV format is 3 or 4-digits ",
+  "email_not_found_error_msg":"email not found",
+  "incorrect_otp_code_error_msg":"Incorrect OTP Code",
+  "password_and_confirm_password_are_not_equal_error_msg":"Password and confirm password are not equals",
+  "email_is_used_before_error_msg":"this email used by another user",
+  "phone_number_is_used_before_error_msg":"this phone number used by another user",
+  "incorrect_visa_card_data_error_msg":"Incorrect Visa Card Data"
 }

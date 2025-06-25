@@ -26,8 +26,7 @@
   "full_name": "الاسم الكامل",
   "gender": "الجنس",
   "age": "العمر",
-  "car_license_image": "صورة رخصة السيارة",
-  "id_image": "صورة الهوية",
+  "car_license_image": "صورة رخصة القيادة ",
   "create": "إنشاء",
   "have_account": "لديك حساب؟",
   "login": "تسجيل الدخول",
@@ -66,9 +65,9 @@
   "submit": "إرسال",
   "male": "ذكر",
   "female": "أنثى",
-  "create_account":"إنشاء حساب",
+  "create_account": "إنشاء حساب",
   "email": "البريد الإلكتروني",
-  "card_holder_name":"اسم صاحب البطاقة",
+  "card_holder_name": "اسم صاحب البطاقة",
   "successful_reservation": "تم الحجز بنجاح",
   "send_btn": "إرسال",
   "cancel_btn": "إلغاء",
@@ -79,8 +78,39 @@
   "value": "القيمة",
   "confirm_new_password": "تأكيد كلمة المرور الجديدة",
   "update_password": "تحديث كلمة المرور",
+<<<<<<< car
   "general_information": "معلومات عامه"
 
 
 
+=======
+  "general_information": "معلومات عامة",
+  "license_image": "صورة الرخصة",
+  "front": "الصورة الأمامية",
+  "back": "الصورة الخلفية",
+  "done": "إنهاء",
+  "photo": "الصورة",
+  "empty_field_error_msg": "لا يمكن ترك الحقل فارغًا",
+  "incorrect_email_or_password_error_msg": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+  "email_valid_format_error_msg": "example@example.com",
+  "password_valid_format_error_msg": "يجب أن تتكون كلمة المرور من:\n1- من 8 أحرف على الأقل\n2- حرف كبير واحد\n3- رقم واحد\n4- رمز واحد (@، _، $)",
+  "phone_number_valid_format_error_msg": "يجب أن يكون رقم الهاتف 009627(7 أو 8 أو 9)XXXXXXX",
+  "full_name_or_card_holder_name_valid_format_error_msg": "يسمح فقط بالأحرف هنا",
+  "gender_valid_error_msg": "يجب اختيار الجنس",
+  "age_valid_error_msg": "الأعمار المسموح بها من 18 فما فوق",
+  "id_front_image_valid_error_msg": "يجب تحميل صورة هوية الجهة الأمامية",
+  "id_back_image_valid_error_msg": "يجب تحميل صورة هوية الجهة الخلفية",
+  "license_front_image_valid_error_msg": "يجب تحميل صورة رخصة القيادة الأمامية",
+  "license_back_image_valid_error_msg": "يجب تحميل صورة رخصة القيادة الخلفية",
+  "card_number_valid_format_error_msg": "يجب أن يتكون رقم البطاقة من 14 رقمًا",
+  "expriy_date_valid_format_error_msg": "تنسيق تاريخ الانتهاء MM/YY، example: (06/23)",
+  "cvv_valid_format_error_msg": "يجب أن يتكون CVV من 3 أو 4 أرقام",
+  "email_not_found_error_msg": "البريد الإلكتروني غير موجود",
+  "incorrect_otp_code_error_msg": "رمز التحقق OTP غير صحيح",
+  "password_and_confirm_password_are_not_equal_error_msg": "كلمة المرور وتأكيد كلمة المرور غير متطابقين",
+  "email_is_used_before_error_msg": "تم استخدام هذا البريد الإلكتروني من قبل",
+  "phone_number_is_used_before_error_msg": "تم استخدام رقم الهاتف هذا من قبل",
+  "incorrect_visa_card_data_error_msg": "بيانات بطاقة الفيزا غير صحيحة"
+>>>>>>> master
 }
+

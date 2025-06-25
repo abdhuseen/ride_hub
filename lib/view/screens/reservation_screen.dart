@@ -4,12 +4,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/controller/counter_controller.dart';
 import 'package:ride_hub/controller/payment_method_switch_button_controller.dart';
+import 'package:ride_hub/validations/card_holder_name_validations.dart';
+import 'package:ride_hub/validations/card_number_validations.dart';
+import 'package:ride_hub/validations/cvv_validations.dart';
+import 'package:ride_hub/validations/expriy_date_validations.dart';
+import 'package:ride_hub/validations/purpose_of_reservations_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/counter.dart';
 import 'package:ride_hub/view/app_widgets/buttons/payment_method_switch_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/input_text.dart';
 
+import '../../controller/error_text_controller.dart';
 import '../app_widgets/buttons/my_back_button.dart';
 
 class ReservationScreen extends StatelessWidget {
@@ -19,13 +26,14 @@ class ReservationScreen extends StatelessWidget {
   final TextEditingController cardNumberController = TextEditingController();
   final TextEditingController cardDateController = TextEditingController();
   final TextEditingController cardCvvController = TextEditingController();
-  final TextEditingController purposeOfReservationController =
-  TextEditingController();
+  final TextEditingController purposeOfReservationController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final paymentController =
-    Provider.of<PaymentMethodSwitchButtonController>(context, listen: false);
+    final paymentController = Provider.of<PaymentMethodSwitchButtonController>(
+      context,
+      listen: false,
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -58,7 +66,9 @@ class ReservationScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(left: 24.w, top: 41.h),
                         child: Text(
-                          AppLang.getLang(context: context).number_of_booking_days,
+                          AppLang.getLang(
+                            context: context,
+                          ).number_of_booking_days,
                           style: GoogleFonts.mulish(
                             fontWeight: FontWeight.w400,
                             fontSize: AppConstants.size8.sp,
@@ -78,7 +88,9 @@ class ReservationScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              AppLang.getLang(context: context).purpose_of_reservation,
+                              AppLang.getLang(
+                                context: context,
+                              ).purpose_of_reservation,
                               style: GoogleFonts.mulish(
                                 fontWeight: FontWeight.w400,
                                 fontSize: AppConstants.size8.sp,
@@ -99,7 +111,7 @@ class ReservationScreen extends StatelessWidget {
                                 ),
                                 textInputType: TextInputType.text,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -118,7 +130,9 @@ class ReservationScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    AppLang.getLang(context: context).enter_card_details,
+                                    AppLang.getLang(
+                                      context: context,
+                                    ).enter_card_details,
                                     style: GoogleFonts.mulish(
                                       fontSize: AppConstants.size4.sp,
                                       fontWeight: FontWeight.w400,
@@ -130,7 +144,9 @@ class ReservationScreen extends StatelessWidget {
                                   Padding(
                                     padding: EdgeInsets.only(top: 28.h),
                                     child: Text(
-                                      AppLang.getLang(context: context).card_holder,
+                                      AppLang.getLang(
+                                        context: context,
+                                      ).card_holder,
                                       style: GoogleFonts.mulish(
                                         fontSize: AppConstants.size8.sp,
                                         fontWeight: FontWeight.w400,
@@ -143,7 +159,10 @@ class ReservationScreen extends StatelessWidget {
                                     padding: EdgeInsets.only(top: 5.h),
                                     child: InputText(
                                       controller: cardHolderController,
-                                      hintText: AppLang.getLang(context: context).card_holder_name,
+                                      hintText:
+                                          AppLang.getLang(
+                                            context: context,
+                                          ).card_holder_name,
                                       hintStyle: GoogleFonts.mulish(
                                         fontSize: AppConstants.size8.sp,
                                         fontWeight: FontWeight.w400,
@@ -157,7 +176,9 @@ class ReservationScreen extends StatelessWidget {
                                   Padding(
                                     padding: EdgeInsets.only(top: 12.h),
                                     child: Text(
-                                      AppLang.getLang(context: context).card_number,
+                                      AppLang.getLang(
+                                        context: context,
+                                      ).card_number,
                                       style: GoogleFonts.mulish(
                                         fontSize: AppConstants.size8.sp,
                                         fontWeight: FontWeight.w400,
@@ -187,29 +208,40 @@ class ReservationScreen extends StatelessWidget {
                                       children: [
                                         // Expiry
                                         Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              AppLang.getLang(context: context).expiry_date,
+                                              AppLang.getLang(
+                                                context: context,
+                                              ).expiry_date,
                                               style: GoogleFonts.mulish(
                                                 fontSize: AppConstants.size8.sp,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1,
-                                                color: AppConstants.secondaryTextColor1,
+                                                color:
+                                                    AppConstants
+                                                        .secondaryTextColor1,
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(top: 5.h),
+                                              padding: EdgeInsets.only(
+                                                top: 5.h,
+                                              ),
                                               child: InputText(
                                                 controller: cardDateController,
                                                 hintText: "06/23",
                                                 hintStyle: GoogleFonts.mulish(
-                                                  fontSize: AppConstants.size9.sp,
+                                                  fontSize:
+                                                      AppConstants.size9.sp,
                                                   fontWeight: FontWeight.w400,
                                                   height: 1,
-                                                  color: AppConstants.hintTextColor3,
+                                                  color:
+                                                      AppConstants
+                                                          .hintTextColor3,
                                                 ),
-                                                textInputType: TextInputType.datetime,
+                                                textInputType:
+                                                    TextInputType.datetime,
                                                 isMini: true,
                                               ),
                                             ),
@@ -218,34 +250,45 @@ class ReservationScreen extends StatelessWidget {
                                         SizedBox(width: 24.w),
                                         // CVV
                                         Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              AppLang.getLang(context: context).cvv,
+                                              AppLang.getLang(
+                                                context: context,
+                                              ).cvv,
                                               style: GoogleFonts.mulish(
                                                 fontSize: AppConstants.size8.sp,
                                                 fontWeight: FontWeight.w400,
                                                 height: 1,
-                                                color: AppConstants.secondaryTextColor1,
+                                                color:
+                                                    AppConstants
+                                                        .secondaryTextColor1,
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(top: 5.h),
+                                              padding: EdgeInsets.only(
+                                                top: 5.h,
+                                              ),
                                               child: InputText(
                                                 controller: cardCvvController,
                                                 hintText: "XXX",
                                                 hintStyle: GoogleFonts.mulish(
-                                                  fontSize: AppConstants.size9.sp,
+                                                  fontSize:
+                                                      AppConstants.size9.sp,
                                                   fontWeight: FontWeight.w400,
                                                   height: 1,
-                                                  color: AppConstants.hintTextColor3,
+                                                  color:
+                                                      AppConstants
+                                                          .hintTextColor3,
                                                 ),
-                                                textInputType: TextInputType.number,
+                                                textInputType:
+                                                    TextInputType.number,
                                                 isMini: true,
                                               ),
                                             ),
                                           ],
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -261,14 +304,49 @@ class ReservationScreen extends StatelessWidget {
                         padding: EdgeInsets.only(
                           left: 16.w,
                           right: 32.w,
-                          top: paymentController.paymentFlag == 0 ? 17.h : 133.h,
+                          top:
+                              paymentController.paymentFlag == 0 ? 17.h : 133.h,
                           bottom: 40.h,
                         ),
                         child: PrimaryButton(
                           text: AppLang.getLang(context: context).send_request,
-                          onClick: () {},
+                          onClick: () {
+                            //get data
+                            int numberOfDays =Provider.of<CounterController>(context, listen: false,).counterValue; //always valid
+                            String reservationPurpose = purposeOfReservationController.text.trim();
+                            int paymentMethod = Provider.of<PaymentMethodSwitchButtonController>(context, listen: false,).paymentFlag; //0 for cash ,1 for visa card
+                            if (paymentMethod == 0) {
+                              //check validity in case cash payment method
+                              bool isPurposeValid = PurposeOfReservationsValidations.isPurposeOfReservationsValid(reservationPurpose,);
+                              if (isPurposeValid) {
+                                //send request using cash payment method to server
+                              }
+                            } else {
+                              //in case visa card payment method
+                              //get card data
+                              String cardHolderName = cardHolderController.text.trim();
+                              String cardNumber = cardNumberController.text.trim();
+                              String expiryDate = cardDateController.text.trim();
+                              String cvv = cardCvvController.text.trim();
+                              //check validity
+                              bool isPurposeValid =PurposeOfReservationsValidations.isPurposeOfReservationsValid(reservationPurpose,);
+                              bool isCardHolderNameValid = CardHolderNameValidations.isCardHolderNameValid(cardHolderName,);
+                              bool isCardNumberValid = CardNumberValidations.isCardNumberValid(cardNumber,);
+                              bool isExpiryDateValid =ExpriyDateValidations.isExpriyDateValid(expiryDate);
+                              bool isCvvValid=CvvValidations.isCvvValid(cvv);
+                              bool isValidForRentRequest=isPurposeValid&&isCardHolderNameValid
+                              &&isCardNumberValid&&isExpiryDateValid&&isCvvValid;
+
+                              if(isValidForRentRequest){
+                                //send request to server then navigate to previous requests screen
+
+                              }
+
+
+                            }
+                          },
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

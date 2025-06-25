@@ -4,6 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/controller/error_text_controller.dart';
+import 'package:ride_hub/validations/email_validations.dart';
+import 'package:ride_hub/validations/password_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/my_back_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
@@ -15,13 +18,14 @@ class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
+  final ErrorTextController emailErrorTextController=ErrorTextController();
+  final ErrorTextController passwordErrorTextController=ErrorTextController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // back button
-      appBar: AppBar(
-        leading: Padding(
+      appBar:AppBar(
+        leading:Padding(
           padding: EdgeInsets.only(left: 24.w),
           child: SizedBox(
             height: 67.h,
@@ -145,7 +149,28 @@ class LoginScreen extends StatelessWidget {
                         child: PrimaryButton(
                           text: AppLang.getLang(context: context).sign_in_btn,
                           onClick: () {
-                            // login functionality
+                            //get data
+                            String email=emailController.text.trim();
+                            String password=passwordController.text.trim();
+
+                            //check validity
+                            bool isEmailValid=EmailValidations.isValidEmail(email);
+                            bool isPasswordValid=PasswordValidations.isValidPassword(password);
+                            bool isValidForLogin=isEmailValid&&isPasswordValid;
+                            if(isValidForLogin){
+                              //send email and password to the server and check if user exist or not
+                              //TODO add login api
+
+
+                            }else{
+
+                              // not valid filed so display message for user
+
+
+                            }
+
+
+
                           },
                         ),
                       ),
