@@ -16,15 +16,21 @@ class RentalCar extends StatelessWidget {
   String model;
   double rentalCost;
   String generalInfo;
+
   // capabilities
   String engineType;
   double engineCapacity;
   int hoursPower;
   String fuel;
+  double performanceScore;
+  String transmissionType;
+
   //general
   int seatCapacity;
   double mileage;
   List<String> imagesLinks;
+  String carNumber;
+  String color;
 
   RentalCar({
     super.key,
@@ -40,6 +46,10 @@ class RentalCar extends StatelessWidget {
     required this.mileage,
     required this.seatCapacity,
     required this.imagesLinks,
+    required this.carNumber,
+    required this.color,
+    required this.transmissionType,
+    required this.performanceScore,
   });
 
   @override
@@ -58,7 +68,7 @@ class RentalCar extends StatelessWidget {
                 FontFamily: 'Mulish-Bold',
                 textColor: AppConstants.primaryTextColor,
               ),
-              HomeButton(homePage: RentalHome(),),
+              HomeButton(homePage: RentalHome()),
             ],
           ),
           bottom: TabBar(
@@ -149,13 +159,22 @@ class RentalCar extends StatelessWidget {
               imageURL: imageURL,
               generalInfo: generalInfo,
               model: model,
-              rentalCost: rentalCost, mileage: mileage,seatCapacity: seatCapacity,
+              rentalCost: rentalCost,
+              mileage: mileage,
+              seatCapacity: seatCapacity,
+              color: color,
+              carNumber: carNumber,
             ),
             CapabilitiesRental(
               imageURL: imageURL,
-             rentalCost: rentalCost,
-         model: model, seatCapacity: seatCapacity, fuel:fuel, hoursPower: hoursPower, engineType: engineType, engineCapacity: engineCapacity, mileage: mileage,
-
+              rentalCost: rentalCost,
+              model: model,
+              fuel: fuel,
+              hoursPower: hoursPower,
+              engineType: engineType,
+              engineCapacity: engineCapacity,
+              performanceScore: performanceScore,
+              transmissionType: transmissionType,
             ),
             RentalImagesScreen(
               model: model,

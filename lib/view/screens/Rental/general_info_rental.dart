@@ -12,6 +12,8 @@ class GeneralInfoRental extends StatelessWidget {
   String generalInfo;
   double mileage;
   int seatCapacity;
+  String color;
+  String carNumber;
 
   GeneralInfoRental({
     super.key,
@@ -21,6 +23,8 @@ class GeneralInfoRental extends StatelessWidget {
     required this.rentalCost,
     required this.mileage,
     required this.seatCapacity,
+    required this.color,
+    required this.carNumber,
   });
 
   @override
@@ -42,7 +46,9 @@ class GeneralInfoRental extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Image
-                  Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  Center(
+                    child: Image.asset(imageURL, width: 220.w, height: 107.h),
+                  ),
                   // Model & Rental cost
                   Container(
                     width: 380.w,
@@ -76,7 +82,7 @@ class GeneralInfoRental extends StatelessWidget {
                   // Mileage & Seat Capacity
                   Container(
                     width: 380.w,
-                    height: 100.h,
+                    height: 150.h,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Color.fromARGB(20, 53, 51, 146),
@@ -125,6 +131,43 @@ class GeneralInfoRental extends StatelessWidget {
                           ],
                         ),
 
+                        SizedBox(height: 5.h),
+                        // Color
+                        Row(
+                          children: [
+                            BaseText(
+                              text: '* Color:',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                            BaseText(
+                              text: '  $color',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                          ],
+                        ),
+
+                        SizedBox(height: 5.h),
+                        // Car Number
+                        Row(
+                          children: [
+                            BaseText(
+                              text: '* Car Number:',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                            BaseText(
+                              text: '  $carNumber',
+                              fontSize: AppConstants.size6.sp,
+                              FontFamily: 'Mulish-Bold',
+                              textColor: AppConstants.primaryTextColor,
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -156,7 +199,6 @@ class GeneralInfoRental extends StatelessWidget {
                       textColor: AppConstants.primaryTextColor,
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -164,8 +206,12 @@ class GeneralInfoRental extends StatelessWidget {
 
           // Book Now button
           Container(
-              margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
-              child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){}))
+            margin: EdgeInsets.only(top: 680.h, left: 30, right: 30),
+            child: PrimaryButton(
+              text: AppLang.getLang(context: context).book_now,
+              onClick: () {},
+            ),
+          ),
         ],
       ),
     );

@@ -54,6 +54,9 @@ class SeeAllScreen extends StatelessWidget {
                               imageLink: officeList[index].imgLink,
                               rate: double.parse(officeList[index].rate.toString()),
                               reservation: double.parse(officeList[index].numberOfReservations.toString()),
+                              description: officeList[index].description,
+                              location: officeList[index].location,
+                              phoneNumber: officeList[index].phoneNumber,
                             ),
                       ),
                     );

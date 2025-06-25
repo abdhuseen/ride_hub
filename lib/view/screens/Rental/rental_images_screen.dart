@@ -10,13 +10,20 @@ class RentalImagesScreen extends StatelessWidget {
   String model;
   double rentalCost;
   List<String> imagesLinks;
-  RentalImagesScreen({super.key,required this.model,required this.imagesLinks,required this.rentalCost,required this.imageURL});
+
+  RentalImagesScreen({
+    super.key,
+    required this.model,
+    required this.imagesLinks,
+    required this.rentalCost,
+    required this.imageURL,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body:Stack(
+      body: Stack(
         children: [
           SingleChildScrollView(
             child: Padding(
@@ -30,7 +37,9 @@ class RentalImagesScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Main car image
-                  Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  Center(
+                    child: Image.asset(imageURL, width: 220.w, height: 107.h),
+                  ),
                   // Car Model & rental cost
                   Container(
                     width: 380.w,
@@ -65,12 +74,14 @@ class RentalImagesScreen extends StatelessWidget {
                     height: 700.h,
 
                     child: ListView.builder(
-                        itemCount: imagesLinks.length-1,
-                        itemBuilder: (context,index){
+                      itemCount: imagesLinks.length - 1,
+                      itemBuilder: (context, index) {
                         return Container(
-                            margin: EdgeInsets.only(bottom: 20),
-                            child: Image.asset(imagesLinks[index+1]));
-                        })
+                          margin: EdgeInsets.only(bottom: 20),
+                          child: Image.asset(imagesLinks[index + 1]),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),
@@ -79,8 +90,12 @@ class RentalImagesScreen extends StatelessWidget {
 
           // Book Now Button
           Container(
-              margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
-              child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){})),
+            margin: EdgeInsets.only(top: 680.h, left: 30, right: 30),
+            child: PrimaryButton(
+              text: AppLang.getLang(context: context).book_now,
+              onClick: () {},
+            ),
+          ),
         ],
       ),
     );

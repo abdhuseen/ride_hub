@@ -19,7 +19,6 @@ class HomeVerticalList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
         Row(
@@ -33,7 +32,16 @@ class HomeVerticalList extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> SeeAllScreen(title: listTitle,officeList: officeList,),),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => SeeAllScreen(
+                          title: listTitle,
+                          officeList: officeList,
+                        ),
+                  ),
+                );
               },
               child: BaseText(
                 text: "${AppLang.getLang(context: context).see_all} >",
@@ -55,35 +63,46 @@ class HomeVerticalList extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(left: 6, right: 6),
-                  child: TextButton(onPressed: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder:
-                            (context) => OfficeScreen(
-                          title: officeList[index].name,
-                          imageLink: officeList[index].imgLink,
-                          rate: double.parse(officeList[index].rate.toString()),
-                          reservation: double.parse(officeList[index].numberOfReservations.toString()),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                              (context) => OfficeScreen(
+                                title: officeList[index].name,
+                                imageLink: officeList[index].imgLink,
+                                rate: double.parse(
+                                  officeList[index].rate.toString(),
+                                ),
+                                reservation: double.parse(
+                                  officeList[index].numberOfReservations
+                                      .toString(),
+                                ),
+                                description: officeList[index].description,
+                                location: officeList[index].location,
+                                phoneNumber: officeList[index].phoneNumber,
+                              ),
                         ),
-                      ),
-                    );
-                  }, child: Column(
-                    children: [
-                      Image.asset(
-                        officeList[index].imgLink,
-                        height: 48.h,
-                        width: 48.w,
-                      ),
-                      SizedBox(height: 5),
-                      BaseText(
-                        text: officeList[index].name,
-                        fontSize: AppConstants.size8.sp,
-                        FontFamily: 'Mulish-Regular',
-                        textColor: AppConstants.primaryTextColor,
-                      ),
-                    ],
-                  )),
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          officeList[index].imgLink,
+                          height: 48.h,
+                          width: 48.w,
+                        ),
+                        SizedBox(height: 5),
+                        BaseText(
+                          text: officeList[index].name,
+                          fontSize: AppConstants.size8.sp,
+                          FontFamily: 'Mulish-Regular',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                      ],
+                    ),
+                  ),
                 );
               },
             ),

@@ -9,26 +9,26 @@ class CapabilitiesRental extends StatelessWidget {
   String imageURL;
   String model;
   double rentalCost;
+
   // capabilities
   String engineType;
   double engineCapacity;
   int hoursPower;
   String fuel;
-  //general
-  int seatCapacity;
-  double mileage;
+  String transmissionType;
+  double performanceScore;
 
   CapabilitiesRental({
     super.key,
     required this.imageURL,
     required this.rentalCost,
     required this.model,
-    required this.seatCapacity,
-    required this.mileage,
     required this.fuel,
     required this.hoursPower,
     required this.engineType,
     required this.engineCapacity,
+    required this.performanceScore,
+    required this.transmissionType,
   });
 
   @override
@@ -50,7 +50,9 @@ class CapabilitiesRental extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Car Image
-                  Center(child: Image.asset(imageURL, width: 220.w, height: 107.h)),
+                  Center(
+                    child: Image.asset(imageURL, width: 220.w, height: 107.h),
+                  ),
                   // Model & rental cost
                   Container(
                     width: 380.w,
@@ -123,6 +125,48 @@ class CapabilitiesRental extends StatelessWidget {
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
                         ),
+                        SizedBox(height: 15.h),
+                        // Transmission Type
+                        BaseText(
+                          text: '* Transmission Type:',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        BaseText(
+                          text: '  $transmissionType',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        SizedBox(height: 15.h),
+                        // Fuel type
+                        BaseText(
+                          text: '* Fuel type:',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        BaseText(
+                          text: '  $fuel',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        SizedBox(height: 15.h),
+                        // Performance score
+                        BaseText(
+                          text: '* Performance Score:',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
+                        BaseText(
+                          text: '  $performanceScore',
+                          fontSize: AppConstants.size6.sp,
+                          FontFamily: 'Mulish-Bold',
+                          textColor: AppConstants.primaryTextColor,
+                        ),
                       ],
                     ),
                   ),
@@ -133,8 +177,12 @@ class CapabilitiesRental extends StatelessWidget {
 
           // Book Now Button
           Container(
-              margin: EdgeInsets.only(top: 680.h,left: 30,right: 30),
-              child: PrimaryButton(text: AppLang.getLang(context: context).book_now, onClick: (){}))
+            margin: EdgeInsets.only(top: 680.h, left: 30, right: 30),
+            child: PrimaryButton(
+              text: AppLang.getLang(context: context).book_now,
+              onClick: () {},
+            ),
+          ),
         ],
       ),
     );

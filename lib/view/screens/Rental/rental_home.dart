@@ -18,30 +18,50 @@ class RentalHome extends StatelessWidget {
       imgLink: 'assets/testImages/carOffice1.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 2',
       imgLink: 'assets/testImages/carOffice2.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 3',
       imgLink: 'assets/testImages/carOffice3.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 4',
       imgLink: 'assets/testImages/carOffice4.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 5',
       imgLink: 'assets/testImages/carOffice5.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
   ];
   List<Office> electricOffices = [
@@ -50,30 +70,50 @@ class RentalHome extends StatelessWidget {
       imgLink: 'assets/testImages/carOffice1.png',
       rate: 4.5,
       numberOfReservations: 220,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 2',
       imgLink: 'assets/testImages/carOffice2.png',
       rate: 4.5,
       numberOfReservations: 220,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 3',
       imgLink: 'assets/testImages/carOffice3.png',
       rate: 4.5,
       numberOfReservations: 220,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 4',
       imgLink: 'assets/testImages/carOffice4.png',
       rate: 4.5,
       numberOfReservations: 220,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 5',
       imgLink: 'assets/testImages/carOffice5.png',
       rate: 4.5,
       numberOfReservations: 220,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
   ];
   List<Office> luxuryOffices = [
@@ -82,30 +122,50 @@ class RentalHome extends StatelessWidget {
       imgLink: 'assets/testImages/carOffice1.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 2',
       imgLink: 'assets/testImages/carOffice2.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 3',
       imgLink: 'assets/testImages/carOffice3.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 4',
       imgLink: 'assets/testImages/carOffice4.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 5',
       imgLink: 'assets/testImages/carOffice5.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
   ];
   List<Office> busesOffices = [
@@ -114,30 +174,50 @@ class RentalHome extends StatelessWidget {
       imgLink: 'assets/testImages/carOffice1.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 2',
       imgLink: 'assets/testImages/carOffice2.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 3',
       imgLink: 'assets/testImages/carOffice3.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 4',
       imgLink: 'assets/testImages/carOffice4.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
     Office(
       name: 'Office 5',
       imgLink: 'assets/testImages/carOffice5.png',
       rate: 4,
       numberOfReservations: 200,
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s',
+      phoneNumber: '07XXXXXXXX',
+      location: 'Amman',
     ),
   ];
 
@@ -166,22 +246,37 @@ class RentalHome extends StatelessWidget {
                 child: Column(
                   children: [
                     // Previous Rental Requests button
-                    PrimaryButton(text: 'Previous Rental Requests', onClick: () {
-                      if(login == true){
-                        Navigator.push(context,MaterialPageRoute(builder: (context)=>PreviousRentalRequests()));
-                      }else{
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
-                      }
-                    }),
+                    PrimaryButton(
+                      text: 'Previous Rental Requests',
+                      onClick: () {
+                        if (login == true) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PreviousRentalRequests(),
+                            ),
+                          );
+                        } else {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          );
+                        }
+                      },
+                    ),
                     SizedBox(height: 20.h),
                     // Econmic car
                     HomeVerticalList(
-                      listTitle: AppLang.getLang(context: context).economic_cars,
+                      listTitle:
+                          AppLang.getLang(context: context).economic_cars,
                       officeList: economicOffices,
                     ),
                     // electric car
                     HomeVerticalList(
-                      listTitle: AppLang.getLang(context: context).electric_cars,
+                      listTitle:
+                          AppLang.getLang(context: context).electric_cars,
                       officeList: electricOffices,
                     ),
                     // Luxury car

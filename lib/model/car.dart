@@ -12,7 +12,11 @@ class Car {
   //general
   int seatCapacity;
   double mileage;
+  String color;
+  String carNumber;
+  String transmissionType;
 
+  double performanceScore;
   String generalInfo;
   int reviews;
   double rate;
@@ -32,12 +36,17 @@ class Car {
     required this.fuel,
     required this.seatCapacity,
     required this.mileage,
+    required this.color,
+    required this.carNumber,
+    required this.transmissionType,
+    required this.performanceScore,
     required this.generalInfo,
     required this.reviews,
     required this.rate,
     this.isReserved = false,
     required this.price,
     required this.dateOfAdd,
+
   });
 
   // fromJson constructor
