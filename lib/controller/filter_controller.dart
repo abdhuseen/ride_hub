@@ -27,10 +27,11 @@ class FilterController extends ChangeNotifier {
   ];
 
   void toggleBrand(String brandName) {
-    if (_filter.selectedBrands.contains(brandName)) {
-      _filter.selectedBrands.remove(brandName);
-    } else {
-      _filter.selectedBrands.add(brandName);
+    for (var brand in _brands) {
+      if (brand.name == brandName) {
+        brand.isSelected = !brand.isSelected;
+        break;
+      }
     }
     notifyListeners();
   }
@@ -56,16 +57,16 @@ class FilterController extends ChangeNotifier {
     _filter.maxRate = max;
     notifyListeners();
   }
-
   void clearAll() {
+    for (var brand in _brands) {
+      brand.isSelected = false;
+    }
     _filter.clearAll();
     notifyListeners();
   }
 
-  bool isBrandSelected(String brandName) {
-    return _filter.selectedBrands.contains(brandName);
 
-  }
+
 
   int getResultCount() {
 

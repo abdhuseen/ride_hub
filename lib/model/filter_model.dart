@@ -1,5 +1,4 @@
 class FilterModel {
-  List<String> selectedBrands;
   String? selectedMonth;
   String? selectedYear;
   double minPrice;
@@ -8,7 +7,6 @@ class FilterModel {
   double maxRate;
 
   FilterModel({
-    this.selectedBrands = const [],
     this.selectedMonth,
     this.selectedYear,
     this.minPrice = 95,
@@ -18,7 +16,7 @@ class FilterModel {
   });
 
   void clearAll() {
-    selectedBrands.clear();
+
     selectedMonth = null;
     selectedYear = null;
     minPrice = 95;
@@ -31,7 +29,7 @@ class FilterModel {
 class Brand {
   final String name;
   final String logoPath;
-  final bool isSelected;
+  bool isSelected;
 
   Brand({
     required this.name,

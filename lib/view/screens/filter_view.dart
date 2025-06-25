@@ -27,43 +27,49 @@ class FilterView extends StatelessWidget {
                 children: [
                   // Header
                   Padding(
-                    padding: const EdgeInsets.all(16),
+                    padding: EdgeInsets.all(16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          AppLang.getLang(context: context).clear_all,
-                          style: GoogleFonts.mulish(
-                            fontSize: AppConstants.size5,
-                            color: Colors.black,
-
-                          ),
+                        Row(
+                          children: [
+                            TxtButton(
+                              text: AppLang.getLang(context: context).clear_all,
+                              onClick: () {
+                                controller.clearAll();
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('All filters have been cleared'),
+                                    backgroundColor: Colors.green,
+                                    duration: Duration(seconds: 2),
+                                  ),
+                                );
+                              },
+                              textStyle: GoogleFonts.mulish(
+                                fontSize: AppConstants.size5,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(width: 4.w),
+                            Icon(
+                              Icons.close,
+                              size: AppConstants.size5,
+                              color: Colors.black,
+                            ),
+                          ],
                         ),
-                        GestureDetector(
-                          onTap: controller.clearAll,
-                          child: Row(
-                            children: [
-                              TxtButton(
-                                text:AppLang.getLang(context: context). filter_by,
-                                onClick: () {
-                                },
-                                textStyle: GoogleFonts.mulish(
-                                  fontSize: AppConstants.size9,
-                                  color: AppConstants.primaryTextColor,
-                                ),
 
-                              ),
-                              SizedBox(width: 4.w),
-                              Icon(
-                                Icons.close,
-                                size: AppConstants.size9,
-                                color: AppConstants.primaryTextColor,
-                              ),
-                            ],
+                        TxtButton(
+                          text: AppLang.getLang(context: context).filter_by,
+                          onClick: () {},
+                          textStyle: GoogleFonts.mulish(
+                            fontSize: AppConstants.size9,
+                            color: AppConstants.primaryTextColor,
                           ),
                         ),
                       ],
                     ),
+
                   ),
 
                   Expanded(
@@ -137,7 +143,7 @@ class FilterView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: controller.brands.map((brand) {
-          bool isSelected = controller.isBrandSelected(brand.name);
+          bool isSelected = brand.isSelected;
           return Padding(
             padding: EdgeInsets.only(right: 8.w),
             child: GestureDetector(

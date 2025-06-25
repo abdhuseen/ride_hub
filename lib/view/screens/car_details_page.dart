@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ride_hub/constants/app_constants.dart';
-
 import '../../constants/app_lang.dart';
 import '../../model/car_details_model.dart';
 import '../app_widgets/buttons/home_button.dart';
@@ -190,7 +189,10 @@ class _CarDetailPageState extends State<CarDetailPage>
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
             decoration: BoxDecoration(
               color:  Color(0xFF5B4FCF).withOpacity(0.1),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
+              ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.1),
@@ -227,7 +229,10 @@ class _CarDetailPageState extends State<CarDetailPage>
             padding:  EdgeInsets.all(16),
             decoration: BoxDecoration(
               color:  Color(0xFF5B4FCF).withOpacity(0.1),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
+              ),
             ),
             child: Text(
               widget.car.generalInfo,
@@ -261,7 +266,10 @@ class _CarDetailPageState extends State<CarDetailPage>
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Color(0xFF5B4FCF).withOpacity(0.1),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

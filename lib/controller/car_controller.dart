@@ -72,7 +72,7 @@ class CarController extends ChangeNotifier {
         id: 'eco_detail_3',
         name: 'Hyundai',
         brand: 'Honda',
-        imagePath: 'assets/images/test_images/maserati.png',
+        imagePath: 'assets/images/test_images/masrerati.png',
         year: 2023,
         price: 'xxxxx JD',
       ),
@@ -181,6 +181,7 @@ class CarController extends ChangeNotifier {
       ],
 
     ),
+
   };
 
   List<CarSection> get carSections => _carSections;

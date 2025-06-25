@@ -201,9 +201,10 @@ class _CarRatingViewState extends State<CarRatingView> {
             width: double.infinity,
             height: 50.h,
             child:PrimaryButton(
-              text:AppLang.getLang(context: context). submit,
-                onClick: () {},
+              text: AppLang.getLang(context: context).submit,
+              onClick: _submitRating,
             ),
+
 
           ),
         ),
@@ -211,5 +212,30 @@ class _CarRatingViewState extends State<CarRatingView> {
     );
   }
 
+  void _submitRating() {
+    if (selectedRating == 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please select a rating.')),
+      );
+      return;
+    }
+
+    if (selectedReason.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please select a reason for evaluation.')),
+      );
+      return;
+    }
+
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Confirmed'),
+        backgroundColor: Colors.green,
+        duration: Duration(seconds: 2),
+      ),
+    );
+
+  }
 
 }
