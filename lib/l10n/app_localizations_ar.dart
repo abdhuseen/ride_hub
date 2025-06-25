@@ -252,6 +252,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get update_password => 'تحديث كلمة المرور';
 
   @override
+<<<<<<< car
+  String get general_information => 'معلومات عامه';
+=======
   String get license_image => 'صورة الرخصة';
 
   @override
@@ -342,4 +345,5 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get incorrect_visa_card_data_error_msg =>
       'بيانات بطاقة الفيزا غير صحيحة';
+>>>>>>> master
 }

@@ -254,6 +254,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get update_password => 'Update Password';
 
   @override
+<<<<<<< car
+  String get general_information => 'General Information';
+=======
   String get license_image => 'License image';
 
   @override
@@ -341,4 +344,5 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get incorrect_visa_card_data_error_msg => 'Incorrect Visa Card Data';
+>>>>>>> master
 }

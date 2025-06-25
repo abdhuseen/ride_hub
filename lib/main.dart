@@ -14,12 +14,15 @@ import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/update_password_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/upload_photo_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/verify_box.dart';
+import 'package:ride_hub/view/screens/home_view.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
 import 'package:ride_hub/view/screens/reservation_screen.dart';
 import 'package:ride_hub/view/screens/selection_screen.dart';
 import 'package:ride_hub/view/screens/sign_up_screen.dart';
 import 'package:ride_hub/view/screens/successful_reservation_screen.dart';
 
+import 'controller/car_controller.dart';
+import 'controller/filter_controller.dart';
 import 'controller/payment_method_switch_button_controller.dart';
 import 'l10n/app_localizations.dart';
 
@@ -42,18 +45,27 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create:(context) => LoginController(),),
           ChangeNotifierProvider(create:(context) =>GenderController(),),
           ChangeNotifierProvider(create:(context) =>CounterController(),),
+<<<<<<< car
+          ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),
+          ),
+          ChangeNotifierProvider(create: (context) => CarController()),
+          ChangeNotifierProvider(create: (context) => FilterController()),
+=======
           ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),),
           ChangeNotifierProvider(create:(context) =>UploadImageController(),),
           ChangeNotifierProvider(create:(context) =>ErrorTextController(),),
+>>>>>>> master
 
 
         ],
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title:'Ride Hub',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
+
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,

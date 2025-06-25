@@ -579,6 +579,13 @@ abstract class AppLocalizations {
   /// **'Update Password'**
   String get update_password;
 
+<<<<<<< car
+  /// No description provided for @general_information.
+  ///
+  /// In en, this message translates to:
+  /// **'General Information'**
+  String get general_information;
+=======
   /// No description provided for @license_image.
   ///
   /// In en, this message translates to:
@@ -734,6 +741,7 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Incorrect Visa Card Data'**
   String get incorrect_visa_card_data_error_msg;
+>>>>>>> master
 }
 
 class _AppLocalizationsDelegate

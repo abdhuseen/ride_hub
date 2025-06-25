@@ -78,6 +78,12 @@
   "value": "القيمة",
   "confirm_new_password": "تأكيد كلمة المرور الجديدة",
   "update_password": "تحديث كلمة المرور",
+<<<<<<< car
+  "general_information": "معلومات عامه"
+
+
+
+=======
   "general_information": "معلومات عامة",
   "license_image": "صورة الرخصة",
   "front": "الصورة الأمامية",
@@ -105,5 +111,6 @@
   "email_is_used_before_error_msg": "تم استخدام هذا البريد الإلكتروني من قبل",
   "phone_number_is_used_before_error_msg": "تم استخدام رقم الهاتف هذا من قبل",
   "incorrect_visa_card_data_error_msg": "بيانات بطاقة الفيزا غير صحيحة"
+>>>>>>> master
 }
 

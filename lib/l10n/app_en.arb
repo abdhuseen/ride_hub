@@ -79,12 +79,16 @@
   "value":"Value",
   "confirm_new_password":"Confirm New Password",
   "update_password":"Update Password",
+<<<<<<< car
+  "general_information": "General Information"
+=======
   "license_image":"License image",
   "id_image":"Id image",
   "front":"Front",
   "back":"Back",
   "done":"Done",
   "photo":"Photo",
+>>>>>>> master
 
   "empty_field_error_msg":"Empty Field Here Not Allowed",
   "incorrect_email_or_password_error_msg":"Either email or password is incorrect",
