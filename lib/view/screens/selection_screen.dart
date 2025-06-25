@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/controller/selection_controller.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
+import 'package:ride_hub/view/screens/Rental/rental_home.dart';
+import 'package:ride_hub/view/screens/home_view.dart';
 
 class SelectionScreen extends StatelessWidget {
   const SelectionScreen({super.key});
@@ -46,6 +48,7 @@ class SelectionScreen extends StatelessWidget {
                           text: AppLang.getLang(context: context).buy_a_car,
                           onClick: () {
                             selectionController.changeFlag(1);
+                            Navigator.push(context,MaterialPageRoute(builder:(context) => HomeView(),));
                           },
                         ),
                       ),
@@ -56,6 +59,7 @@ class SelectionScreen extends StatelessWidget {
                           text: AppLang.getLang(context: context).rental_a_car,
                           onClick: () {
                             selectionController.changeFlag(0);
+                            Navigator.push(context,MaterialPageRoute(builder: (context) =>RentalHome(),));
                           },
                         ),
                       ),

@@ -6,6 +6,9 @@ import 'package:ride_hub/model/reviews_model.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/base_text.dart';
 
+import '../login_screen.dart';
+import '../reservation_screen.dart';
+
 class ReviewRentalScreen extends StatelessWidget {
   String imageURL;
   String model;
@@ -159,7 +162,16 @@ class ReviewRentalScreen extends StatelessWidget {
             margin: EdgeInsets.only(top: 690.h, left: 30, right: 30),
             child: PrimaryButton(
               text: AppLang.getLang(context: context).book_now,
-              onClick: () {},
+              onClick: () {
+                bool isLogged=false;
+                if(isLogged){
+                  Navigator.push(context,MaterialPageRoute(builder:(context) =>ReservationScreen(),));
+                }
+
+                else {
+                  Navigator.push(context,MaterialPageRoute(builder:(context) =>LoginScreen()),);
+                }
+              },
             ),
           ),
         ],

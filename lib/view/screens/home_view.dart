@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_constants.dart';
+import 'package:ride_hub/view/app_widgets/buttons/my_back_button.dart';
 import '../../controller/car_controller.dart';
 import '../app_widgets/car_widget/car_section_widget.dart';
 
@@ -9,7 +10,7 @@ import '../app_widgets/car_widget/car_section_widget.dart';
 
 
 class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+   HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,7 @@ class HomeView extends StatelessWidget {
         backgroundColor: AppConstants.primaryColor,
         elevation: 0,
         centerTitle: true,
+        leading:MyBackButton(),
       ),
       body: Consumer<CarController>(
         builder: (context, controller, child) {

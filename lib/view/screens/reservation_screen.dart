@@ -15,6 +15,7 @@ import 'package:ride_hub/view/app_widgets/buttons/counter.dart';
 import 'package:ride_hub/view/app_widgets/buttons/payment_method_switch_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/input_text.dart';
+import 'package:ride_hub/view/screens/Rental/previous_rental_requests.dart';
 
 import '../../controller/error_text_controller.dart';
 import '../app_widgets/buttons/my_back_button.dart';
@@ -320,6 +321,8 @@ class ReservationScreen extends StatelessWidget {
                               bool isPurposeValid = PurposeOfReservationsValidations.isPurposeOfReservationsValid(reservationPurpose,);
                               if (isPurposeValid) {
                                 //send request using cash payment method to server
+                                Navigator.push(context,MaterialPageRoute(builder:(context) =>PreviousRentalRequests(),));
+
                               }
                             } else {
                               //in case visa card payment method
@@ -336,9 +339,16 @@ class ReservationScreen extends StatelessWidget {
                               bool isCvvValid=CvvValidations.isCvvValid(cvv);
                               bool isValidForRentRequest=isPurposeValid&&isCardHolderNameValid
                               &&isCardNumberValid&&isExpiryDateValid&&isCvvValid;
+                              print(isPurposeValid);
+                              print(isCardHolderNameValid);
+                              print(isCardNumberValid);
+                              print(isExpiryDateValid);
+                              print(isCvvValid);
+                              print(isValidForRentRequest);
 
                               if(isValidForRentRequest){
                                 //send request to server then navigate to previous requests screen
+                                Navigator.push(context,MaterialPageRoute(builder:(context) =>PreviousRentalRequests(),));
 
                               }
 

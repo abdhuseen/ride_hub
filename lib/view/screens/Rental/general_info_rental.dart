@@ -4,6 +4,9 @@ import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/base_text.dart';
+import 'package:ride_hub/view/screens/reservation_screen.dart';
+
+import '../login_screen.dart';
 
 class GeneralInfoRental extends StatelessWidget {
   String imageURL;
@@ -209,7 +212,16 @@ class GeneralInfoRental extends StatelessWidget {
             margin: EdgeInsets.only(top: 680.h, left: 30, right: 30),
             child: PrimaryButton(
               text: AppLang.getLang(context: context).book_now,
-              onClick: () {},
+              onClick: () {
+                bool isLogged=false;
+                if(isLogged){
+                  Navigator.push(context,MaterialPageRoute(builder:(context) =>ReservationScreen(),));
+                }
+
+                else {
+                  Navigator.push(context,MaterialPageRoute(builder:(context) =>LoginScreen()),);
+                }
+              },
             ),
           ),
         ],

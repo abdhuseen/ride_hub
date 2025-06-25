@@ -11,6 +11,7 @@ import 'package:ride_hub/view/app_widgets/buttons/my_back_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/screens/forget_password_screen.dart';
+import 'package:ride_hub/view/screens/reservation_screen.dart';
 import 'package:ride_hub/view/screens/sign_up_screen.dart';
 import '../app_widgets/inputs/input_text.dart';
 
@@ -160,7 +161,7 @@ class LoginScreen extends StatelessWidget {
                             if(isValidForLogin){
                               //send email and password to the server and check if user exist or not
                               //TODO add login api
-
+                              Navigator.push(context,MaterialPageRoute(builder: (context) => ReservationScreen(),));
 
                             }else{
 

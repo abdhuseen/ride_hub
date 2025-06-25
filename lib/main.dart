@@ -19,6 +19,7 @@ import 'package:ride_hub/view/screens/login_screen.dart';
 import 'package:ride_hub/view/screens/reservation_screen.dart';
 import 'package:ride_hub/view/screens/selection_screen.dart';
 import 'package:ride_hub/view/screens/sign_up_screen.dart';
+import 'package:ride_hub/view/screens/splash_screen.dart';
 import 'package:ride_hub/view/screens/successful_reservation_screen.dart';
 
 import 'controller/car_controller.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
 
         );
       },
-      child:LoginScreen()
+      child:SplashScreen()
     );
   }
 }

@@ -65,14 +65,14 @@ class PreviousRentalRequests extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {},
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment:CrossAxisAlignment.center,
                         children: [
                           Image.asset(
                             previousRequests[index].imageURL,
                             width: 161.w,
                             height: 52.h,
                           ),
-                          SizedBox(height: 2.h),
+                          //SizedBox(height: 2.h),
                           // Name
                           BaseText(
                             text: previousRequests[index].name,
@@ -80,7 +80,7 @@ class PreviousRentalRequests extends StatelessWidget {
                             FontFamily: 'Mulish-Regular',
                             textColor: AppConstants.primaryTextColor,
                           ),
-                          SizedBox(height: 2.h),
+                         // SizedBox(height: 2.h),
                           // Year
                           BaseText(
                             text: previousRequests[index].year.toString(),
@@ -88,7 +88,7 @@ class PreviousRentalRequests extends StatelessWidget {
                             FontFamily: 'Mulish-Bold',
                             textColor: AppConstants.primaryColor,
                           ),
-                          SizedBox(height: 2.h),
+                         // SizedBox(height: 2.h),
                           // Rate
                           BaseText(
                             text:
@@ -99,11 +99,12 @@ class PreviousRentalRequests extends StatelessWidget {
                           ),
                           // State
                           BaseText(
-                            text: previousRequests[index].state,
-                            fontSize: AppConstants.size4.sp,
-                            FontFamily: 'Mulish-Bold',
-                            textColor: Colors.blueGrey,
-                          ),
+                             text:previousRequests[index].state,
+                             fontSize: AppConstants.size4.sp,
+                             FontFamily:'Mulish-Bold',
+                             textColor:Colors.blueGrey,
+                           ),
+
                         ],
                       ),
                     ),

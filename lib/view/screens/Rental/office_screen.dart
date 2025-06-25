@@ -332,7 +332,7 @@ class OfficeScreen extends StatelessWidget {
                                     width: 161.w,
                                     height: 52.h,
                                   ),
-                                  SizedBox(height: 20.h),
+                                  SizedBox(height: 10.h),
                                   // Car name
                                   BaseText(
                                     text: economicCars[index].name,

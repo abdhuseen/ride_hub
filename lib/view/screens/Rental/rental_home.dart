@@ -292,6 +292,7 @@ class RentalHome extends StatelessWidget {
                           ).buses_and_public_transportation,
                       officeList: busesOffices,
                     ),
+
                   ],
                 ),
               ),
