@@ -14,6 +14,7 @@ import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/update_password_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/upload_photo_box.dart';
 import 'package:ride_hub/view/app_widgets/inputs/verify_box.dart';
+import 'package:ride_hub/view/screens/Rental/rental_home.dart';
 import 'package:ride_hub/view/screens/home_view.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
 import 'package:ride_hub/view/screens/reservation_screen.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
 
         );
       },
-      child:LoginScreen()
+      child:RentalHome()
     );
   }
 }
