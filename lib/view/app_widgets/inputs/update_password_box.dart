@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/validations/password_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
+import 'package:ride_hub/view/screens/login_screen.dart';
 
 import 'input_text.dart';
 
@@ -88,6 +91,29 @@ class UpdatePasswordBox extends StatelessWidget {
           //update button
           Center(
             child:SecondaryButton(text:AppLang.getLang(context: context).update_password, onClick:(){
+              //get data
+              String password=passwordController.text.trim();
+              String confirmPassword=confirmPasswordController.text.trim();
+              //check validity
+              bool isPasswordValid=PasswordValidations.isValidPassword(password);
+              bool isConfirmPasswordValid=PasswordValidations.isValidPassword(confirmPassword);
+              bool isValidForUpdate=isPasswordValid&&isConfirmPasswordValid;
+              if(isValidForUpdate){
+                //check if password nad confirm password are same
+                if(password==confirmPassword){
+                  //send the new password to the server and then navigate to login screen
+                  Navigator.pushReplacement(context,MaterialPageRoute(builder:(context) =>LoginScreen(),));
+                }else{
+                  //password and confirm password not equals message
+                  print(" password not equal confirm password");
+
+                }
+              }else{
+                //invalid password message
+                print("invalid password or confirm password");
+              }
+
+
             }, width:272),
           )
 

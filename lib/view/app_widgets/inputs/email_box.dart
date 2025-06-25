@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/validations/email_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
@@ -67,8 +68,23 @@ class EmailBox extends StatelessWidget {
                 ),),
                 //send button
                 SecondaryButton(text:AppLang.getLang(context: context).send_btn, onClick:(){
+                  //get data
+                  String email=emailController.text;
+                  //check validity
+                  bool isEmailValid=EmailValidations.isValidEmail(email);
+                  if(isEmailValid){
+                    //send email to server and check if it is exist
+                    //in case exist
+                    Navigator.push(context,MaterialPageRoute(builder:(context) =>VerifyScreen(),));
 
-                  Navigator.push(context,MaterialPageRoute(builder:(context) =>VerifyScreen(),));
+
+                  }else{
+                    //display invalid email
+                    print("invalid email");
+                  }
+
+
+
 
 
                 },width:63)

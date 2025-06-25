@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class CounterController extends ChangeNotifier {
 
-  int counterValue=0;
+  int counterValue=1;
 
   void increaseCounter(){
     counterValue++;
@@ -10,7 +10,7 @@ class CounterController extends ChangeNotifier {
   }
 
   void decreaseCounter(){
-    if(counterValue>0){
+    if(counterValue>1){
       counterValue--;
     }
 

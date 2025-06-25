@@ -54,8 +54,26 @@ class VerifyBox extends StatelessWidget {
           //verify button
             Center(
               child:SecondaryButton(text:AppLang.getLang(context: context).verify_btn, onClick:(){
+                //get data
+                String userOTP=otpController.text.trim();
+                //check validity
+                if(userOTP.isNotEmpty){
+                  //get server OTP and check it with the user entered OTP
+                  String serverOTP="1234";//will get from api
+                  if(userOTP==serverOTP){
+                    Navigator.push(context,MaterialPageRoute(builder:(context) =>UpdatePasswordScreen(),));
 
-                Navigator.push(context,MaterialPageRoute(builder:(context) =>UpdatePasswordScreen(),));
+                  }else{
+                    print("wrong OTP");
+                  }
+
+                }else{
+                  print("invalid empty OTP");
+                }
+
+
+
+
 
               },width:68),
             )

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/controller/counter_controller.dart';
+import 'package:ride_hub/controller/error_text_controller.dart';
 import 'package:ride_hub/controller/gender_controller.dart';
 import 'package:ride_hub/controller/login_controller.dart';
 import 'package:ride_hub/controller/selection_controller.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create:(context) =>CounterController(),),
           ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),),
           ChangeNotifierProvider(create:(context) =>UploadImageController(),),
+          ChangeNotifierProvider(create:(context) =>ErrorTextController(),),
 
 
         ],

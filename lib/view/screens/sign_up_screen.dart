@@ -2,6 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:ride_hub/controller/gender_controller.dart';
+import 'package:ride_hub/controller/upload_image_controller.dart';
+import 'package:ride_hub/validations/age_validations.dart';
+import 'package:ride_hub/validations/email_validations.dart';
+import 'package:ride_hub/validations/full_name_validations.dart';
+import 'package:ride_hub/validations/gender_validations.dart';
+import 'package:ride_hub/validations/password_validations.dart';
+import 'package:ride_hub/validations/phone_number_validations.dart';
+import 'package:ride_hub/validations/photo_validation.dart';
 import 'package:ride_hub/view/app_widgets/buttons/gender_box_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/upload_image_box.dart';
@@ -184,7 +194,52 @@ class SignUpScreen extends StatelessWidget {
                             left: 24.w, right: 24.w, top: 36.h),
                         child: PrimaryButton(
                           text: AppLang.getLang(context: context).create,
-                          onClick: () {},
+                          onClick: () {
+                            //get data
+                            String phoneNumber=phoneNumberController.text.trim();
+                            String email=emailController.text.trim();
+                            String password=passwordController.text.trim();
+                            String fullName=fullNameController.text.trim();
+                            String gender=Provider.of<GenderController>(context,listen:false).selectedGender;
+                            String age=ageController.text.trim();
+                            UploadImageController uploadImageController=Provider.of<UploadImageController>(context,listen:false);
+                            String idFrontImagePath=uploadImageController.idFrontImagePath;
+                            String idBackImagePath=uploadImageController.idBackImagePath;
+                            String licenseFrontImagePath=uploadImageController.licenseFrontImagePath;
+                            String licenseBackImagePath=uploadImageController.licenseBackImagePath;
+                            //check validity
+                            bool isPhoneNumberValid=PhoneNumberValidations.isValidPhoneNumber(phoneNumber);
+                            bool isEmailValid=EmailValidations.isValidEmail(email);
+                            bool isPasswordValid=PasswordValidations.isValidPassword(password);
+                            bool isFullNameValid=FullNameValidations.isValidFullName(fullName);
+                            bool isGenderValid=GenderValidations.isValidGender(gender);
+                            bool isAgeValid=AgeValidations.isValidAge(age);
+                            bool isIdFrontImageValid=PhotoValidation.isValidPhoto(idFrontImagePath);
+                            bool isIdBackImageValid=PhotoValidation.isValidPhoto(idBackImagePath);
+                            bool isLicenseFrontImageValid=PhotoValidation.isValidPhoto(licenseFrontImagePath);
+                            bool isLicenseBackImageValid=PhotoValidation.isValidPhoto(licenseBackImagePath);
+                            bool isValidForSignUp=isPhoneNumberValid&&isEmailValid&&isPasswordValid&&isFullNameValid&&
+                            isGenderValid&&isAgeValid&&isIdFrontImageValid&&isIdBackImageValid&&isLicenseFrontImageValid&&
+                            isLicenseBackImageValid;
+
+                            if(isValidForSignUp){
+                              //send data to server to create new account and then navigate to login
+                              Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => LoginScreen(),));
+
+                            }else{
+                              //display invalid messages
+
+
+                            }
+
+
+
+
+
+
+
+
+                          },
                         ),
                       ),
                       // already have account
