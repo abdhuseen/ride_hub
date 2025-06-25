@@ -16,6 +16,7 @@ import 'package:ride_hub/view/app_widgets/buttons/payment_method_switch_button.d
 import 'package:ride_hub/view/app_widgets/buttons/primary_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/input_text.dart';
 
+import '../../controller/error_text_controller.dart';
 import '../app_widgets/buttons/my_back_button.dart';
 
 class ReservationScreen extends StatelessWidget {
@@ -25,8 +26,7 @@ class ReservationScreen extends StatelessWidget {
   final TextEditingController cardNumberController = TextEditingController();
   final TextEditingController cardDateController = TextEditingController();
   final TextEditingController cardCvvController = TextEditingController();
-  final TextEditingController purposeOfReservationController =
-      TextEditingController();
+  final TextEditingController purposeOfReservationController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

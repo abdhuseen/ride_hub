@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
+import 'package:ride_hub/controller/error_text_controller.dart';
 import 'package:ride_hub/validations/email_validations.dart';
 import 'package:ride_hub/validations/password_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/my_back_button.dart';
@@ -17,13 +18,14 @@ class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
+  final ErrorTextController emailErrorTextController=ErrorTextController();
+  final ErrorTextController passwordErrorTextController=ErrorTextController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // back button
-      appBar: AppBar(
-        leading: Padding(
+      appBar:AppBar(
+        leading:Padding(
           padding: EdgeInsets.only(left: 24.w),
           child: SizedBox(
             height: 67.h,

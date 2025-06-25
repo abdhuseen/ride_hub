@@ -8,6 +8,7 @@ import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
 import 'package:ride_hub/view/screens/update_password_screen.dart';
+import '../../../controller/error_text_controller.dart';
 import 'input_text.dart';
 
 class VerifyBox extends StatelessWidget {

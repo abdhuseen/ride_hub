@@ -18,6 +18,7 @@ import 'package:ride_hub/view/app_widgets/buttons/upload_image_box.dart';
 import 'package:ride_hub/view/screens/login_screen.dart';
 import '../../constants/app_constants.dart';
 import '../../constants/app_lang.dart';
+import '../../controller/error_text_controller.dart';
 import '../app_widgets/buttons/my_back_button.dart';
 import '../app_widgets/buttons/txt_button.dart';
 import '../app_widgets/inputs/input_text.dart';
