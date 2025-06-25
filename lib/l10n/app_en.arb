@@ -78,6 +78,7 @@
   "new_password":"New Password",
   "value":"Value",
   "confirm_new_password":"Confirm New Password",
-  "update_password":"Update Password"
+  "update_password":"Update Password",
+  "general_information": "General Information"
 
 }

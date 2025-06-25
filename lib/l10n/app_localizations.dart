@@ -578,6 +578,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Update Password'**
   String get update_password;
+
+  /// No description provided for @general_information.
+  ///
+  /// In en, this message translates to:
+  /// **'General Information'**
+  String get general_information;
 }
 
 class _AppLocalizationsDelegate

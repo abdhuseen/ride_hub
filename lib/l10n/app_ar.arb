@@ -78,7 +78,8 @@
   "new_password": "كلمة المرور الجديدة",
   "value": "القيمة",
   "confirm_new_password": "تأكيد كلمة المرور الجديدة",
-  "update_password": "تحديث كلمة المرور"
+  "update_password": "تحديث كلمة المرور",
+  "general_information": "معلومات عامه"
 
 
 

@@ -250,4 +250,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get update_password => 'تحديث كلمة المرور';
+
+  @override
+  String get general_information => 'معلومات عامه';
 }
