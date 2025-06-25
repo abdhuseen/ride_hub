@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -46,7 +45,7 @@ class InputText extends StatelessWidget {
                 borderRadius: BorderRadius.circular(25.r),
                 border: Border.all(
                   color: AppConstants.backgroundColor4,
-                  width: 1,
+                  width:1,
                 ),
               ),
               child: TextField(

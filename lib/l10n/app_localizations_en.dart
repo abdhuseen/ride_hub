@@ -267,4 +267,78 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get photo => 'Photo';
+
+  @override
+  String get empty_field_error_msg => 'Empty Field Here Not Allowed';
+
+  @override
+  String get incorrect_email_or_password_error_msg =>
+      'Either email or password is incorrect';
+
+  @override
+  String get email_valid_format_error_msg => 'example@example.com';
+
+  @override
+  String get password_valid_format_error_msg =>
+      'your password must be at least \n 1-8 Characters \n 2-one capital litter\n3-one number\n4-one symbol(@,_,\$))';
+
+  @override
+  String get phone_number_valid_format_error_msg =>
+      'your phone must be 009627(7 OR 8 OR 9)XXXXXXX';
+
+  @override
+  String get full_name_or_card_holder_name_valid_format_error_msg =>
+      'only litters allowed here';
+
+  @override
+  String get gender_valid_error_msg => 'You select a gender';
+
+  @override
+  String get age_valid_error_msg => 'allowed ages from 18 and above';
+
+  @override
+  String get id_front_image_valid_error_msg => 'must be upload id front image';
+
+  @override
+  String get id_back_image_valid_error_msg => 'must be upload id back image';
+
+  @override
+  String get license_front_image_valid_error_msg =>
+      'must be upload license front image';
+
+  @override
+  String get license_back_image_valid_error_msg =>
+      'must be upload license back image';
+
+  @override
+  String get card_number_valid_format_error_msg =>
+      'your card must be consist of 14 digit';
+
+  @override
+  String get expriy_date_valid_format_error_msg =>
+      'Expriy date format MM/YY ,example:(06/23)';
+
+  @override
+  String get cvv_valid_format_error_msg => 'CVV format is 3 or 4-digits ';
+
+  @override
+  String get email_not_found_error_msg => 'email not found';
+
+  @override
+  String get incorrect_otp_code_error_msg => 'Incorrect OTP Code';
+
+  @override
+  String get password_and_confirm_password_are_not_equal_error_msg =>
+      'Password and confirm password are not equals';
+
+  @override
+  String get email_is_used_before_error_msg =>
+      'this email used by another user';
+
+  @override
+  String get phone_number_is_used_before_error_msg =>
+      'this phone number used by another user';
+
+  @override
+  String get incorrect_visa_card_data_error_msg => 'Incorrect Visa Card Data';
 }
