@@ -3,12 +3,18 @@ class Office {
   String imgLink;
   double rate;
   int numberOfReservations;
+  String location;
+  String phoneNumber;
+  String description;
 
   Office({
     required this.name,
     required this.imgLink,
     required this.rate,
     required this.numberOfReservations,
+    required this.description,
+    required this.location,
+    required this.phoneNumber,
   });
 
   // fromJson constructor
@@ -18,6 +24,9 @@ class Office {
       imgLink: json['imgLink'],
       rate: (json['rate'] as num).toDouble(),
       numberOfReservations: json['numberOfReservations'],
+      location: json['location'],
+      phoneNumber: json['phoneNumber'],
+      description: json['description'],
     );
   }
 
@@ -28,6 +37,9 @@ class Office {
       'imgLink': imgLink,
       'rate': rate,
       'numberOfReservations': numberOfReservations,
+      'description' :description,
+      'phoneNumber' : phoneNumber,
+      'loaction' : location,
     };
   }
 }

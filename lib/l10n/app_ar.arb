@@ -78,13 +78,7 @@
   "value": "القيمة",
   "confirm_new_password": "تأكيد كلمة المرور الجديدة",
   "update_password": "تحديث كلمة المرور",
-<<<<<<< car
-  "general_information": "معلومات عامه"
-
-
-
-=======
-  "general_information": "معلومات عامة",
+  "general_information": "معلومات عامه",
   "license_image": "صورة الرخصة",
   "front": "الصورة الأمامية",
   "back": "الصورة الخلفية",
@@ -110,7 +104,23 @@
   "password_and_confirm_password_are_not_equal_error_msg": "كلمة المرور وتأكيد كلمة المرور غير متطابقين",
   "email_is_used_before_error_msg": "تم استخدام هذا البريد الإلكتروني من قبل",
   "phone_number_is_used_before_error_msg": "تم استخدام رقم الهاتف هذا من قبل",
-  "incorrect_visa_card_data_error_msg": "بيانات بطاقة الفيزا غير صحيحة"
->>>>>>> master
+  "incorrect_visa_card_data_error_msg": "بيانات بطاقة الفيزا غير صحيحة",
+  "previous_rental_requests" : "طلبات الإيجار السابقة",
+  "accept" : "مقبول",
+  "reject" : "مرفوض",
+  "mileage" : "المسافة المقطوعة",
+  "seat_capacity" : "سعة المقعد",
+  "seat" : "مقعد",
+  "km_balance" : "كم",
+  "color" : "اللون",
+  "car_number" : "رقم السيارة",
+  "engine_option" : "خيار المحرك",
+  "l" : "لتر",
+  "cylinder" : "اسطوانة",
+  "hoers_power" : "قوة حصان",
+  "transmission_type" : "نوع ناقل الحركة",
+  "fuel_type" : "نوع الوقود",
+  "performance_score" : "درجة الأداء"
+
 }
 

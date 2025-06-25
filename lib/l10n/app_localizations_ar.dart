@@ -94,9 +94,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get car_license_image => 'صورة رخصة القيادة ';
 
   @override
-  String get id_image => 'صورة الهوية';
-
-  @override
   String get create => 'إنشاء';
 
   @override
@@ -252,10 +249,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get update_password => 'تحديث كلمة المرور';
 
   @override
-<<<<<<< car
   String get general_information => 'معلومات عامه';
-=======
+
+  @override
   String get license_image => 'صورة الرخصة';
+
+  @override
+  String get id_image => 'Id image';
 
   @override
   String get front => 'الصورة الأمامية';
@@ -345,5 +345,52 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get incorrect_visa_card_data_error_msg =>
       'بيانات بطاقة الفيزا غير صحيحة';
->>>>>>> master
+
+  @override
+  String get previous_rental_requests => 'طلبات الإيجار السابقة';
+
+  @override
+  String get accept => 'مقبول';
+
+  @override
+  String get reject => 'مرفوض';
+
+  @override
+  String get mileage => 'المسافة المقطوعة';
+
+  @override
+  String get seat_capacity => 'سعة المقعد';
+
+  @override
+  String get seat => 'مقعد';
+
+  @override
+  String get km_balance => 'كم';
+
+  @override
+  String get color => 'اللون';
+
+  @override
+  String get car_number => 'رقم السيارة';
+
+  @override
+  String get engine_option => 'خيار المحرك';
+
+  @override
+  String get l => 'لتر';
+
+  @override
+  String get cylinder => 'اسطوانة';
+
+  @override
+  String get hoers_power => 'قوة حصان';
+
+  @override
+  String get transmission_type => 'نوع ناقل الحركة';
+
+  @override
+  String get fuel_type => 'نوع الوقود';
+
+  @override
+  String get performance_score => 'درجة الأداء';
 }

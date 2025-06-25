@@ -266,12 +266,6 @@ abstract class AppLocalizations {
   /// **' license image'**
   String get car_license_image;
 
-  /// No description provided for @id_image.
-  ///
-  /// In en, this message translates to:
-  /// **'Id image'**
-  String get id_image;
-
   /// No description provided for @create.
   ///
   /// In en, this message translates to:
@@ -579,18 +573,23 @@ abstract class AppLocalizations {
   /// **'Update Password'**
   String get update_password;
 
-<<<<<<< car
   /// No description provided for @general_information.
   ///
   /// In en, this message translates to:
   /// **'General Information'**
   String get general_information;
-=======
+
   /// No description provided for @license_image.
   ///
   /// In en, this message translates to:
   /// **'License image'**
   String get license_image;
+
+  /// No description provided for @id_image.
+  ///
+  /// In en, this message translates to:
+  /// **'Id image'**
+  String get id_image;
 
   /// No description provided for @front.
   ///
@@ -741,7 +740,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Incorrect Visa Card Data'**
   String get incorrect_visa_card_data_error_msg;
->>>>>>> master
+
+  /// No description provided for @previous_rental_requests.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous Rental Requests'**
+  String get previous_rental_requests;
+
+  /// No description provided for @accept.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get accept;
+
+  /// No description provided for @reject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get reject;
+
+  /// No description provided for @mileage.
+  ///
+  /// In en, this message translates to:
+  /// **'Mileage'**
+  String get mileage;
+
+  /// No description provided for @seat_capacity.
+  ///
+  /// In en, this message translates to:
+  /// **'Seat Capacity'**
+  String get seat_capacity;
+
+  /// No description provided for @seat.
+  ///
+  /// In en, this message translates to:
+  /// **'Seat'**
+  String get seat;
+
+  /// No description provided for @km_balance.
+  ///
+  /// In en, this message translates to:
+  /// **'km balance'**
+  String get km_balance;
+
+  /// No description provided for @color.
+  ///
+  /// In en, this message translates to:
+  /// **'Color'**
+  String get color;
+
+  /// No description provided for @car_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Car Number'**
+  String get car_number;
+
+  /// No description provided for @engine_option.
+  ///
+  /// In en, this message translates to:
+  /// **'Engine Option'**
+  String get engine_option;
+
+  /// No description provided for @l.
+  ///
+  /// In en, this message translates to:
+  /// **'L'**
+  String get l;
+
+  /// No description provided for @cylinder.
+  ///
+  /// In en, this message translates to:
+  /// **'Cylinder'**
+  String get cylinder;
+
+  /// No description provided for @hoers_power.
+  ///
+  /// In en, this message translates to:
+  /// **'Hoers Power'**
+  String get hoers_power;
+
+  /// No description provided for @transmission_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Transmission Type'**
+  String get transmission_type;
+
+  /// No description provided for @fuel_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel Type'**
+  String get fuel_type;
+
+  /// No description provided for @performance_score.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance Score'**
+  String get performance_score;
 }
 
 class _AppLocalizationsDelegate

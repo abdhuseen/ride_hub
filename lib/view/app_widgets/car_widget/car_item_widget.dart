@@ -10,7 +10,7 @@ import '../../../model/cars_model.dart';
 
 
 class CarItemWidget extends StatelessWidget {
-  final Car car;
+  final CarsModel car;
   final bool isSelected;
   final VoidCallback? onTap;
 

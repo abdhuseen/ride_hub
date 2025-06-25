@@ -14,37 +14,37 @@ class CarController extends ChangeNotifier {
     CarSection(
       title: 'Economical Cars',
       cars: [
-        Car(id: 'eco_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
-        Car(id: 'eco_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
-        Car(id: 'eco_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 5),
-        Car(id: 'eco_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
+        CarsModel(id: 'eco_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
+        CarsModel(id: 'eco_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
+        CarsModel(id: 'eco_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 5),
+        CarsModel(id: 'eco_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
       ],
     ),
     CarSection(
       title: 'Electric cars',
       cars: [
-        Car(id: 'elec_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
-        Car(id: 'elec_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
-        Car(id: 'elec_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 5),
-        Car(id: 'elec_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
+        CarsModel(id: 'elec_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
+        CarsModel(id: 'elec_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
+        CarsModel(id: 'elec_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 5),
+        CarsModel(id: 'elec_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
       ],
     ),
     CarSection(
       title: 'Luxury cars',
       cars: [
-        Car(id: 'lux_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
-        Car(id: 'lux_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
-        Car(id: 'lux_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 6),
-        Car(id: 'lux_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
+        CarsModel(id: 'lux_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
+        CarsModel(id: 'lux_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
+        CarsModel(id: 'lux_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 6),
+        CarsModel(id: 'lux_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
       ],
     ),
     CarSection(
       title: 'Buses and public transportation',
       cars: [
-        Car(id: 'bus_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
-        Car(id: 'bus_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
-        Car(id: 'bus_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 5),
-        Car(id: 'bus_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
+        CarsModel(id: 'bus_mercedes', brand: 'Mercedes', imagePath: 'assets/images/test_images/mercedes.png', count: 32),
+        CarsModel(id: 'bus_bmw', brand: 'BMW', imagePath: 'assets/images/test_images/bmw.png', count: 12),
+        CarsModel(id: 'bus_maserati', brand: 'Maserati', imagePath: 'assets/images/test_images/masrerati.png', count: 5),
+        CarsModel(id: 'bus_porsche', brand: 'Porsche', imagePath: 'assets/images/test_images/porsche.png', count: 8),
       ],
     ),
   ];

@@ -1,10 +1,10 @@
-class Car {
+class CarsModel {
   final String id;
   final String brand;
   final String imagePath;
   final int count;
 
-  Car({
+  CarsModel({
     required this.id,
     required this.brand,
     required this.imagePath,
@@ -32,7 +32,7 @@ class CarDetail {
 
 class CarSection {
   final String title;
-  final List<Car> cars;
+  final List<CarsModel> cars;
 
   CarSection({
     required this.title,

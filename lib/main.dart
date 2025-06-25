@@ -45,16 +45,16 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create:(context) => LoginController(),),
           ChangeNotifierProvider(create:(context) =>GenderController(),),
           ChangeNotifierProvider(create:(context) =>CounterController(),),
-<<<<<<< car
+
           ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),
           ),
           ChangeNotifierProvider(create: (context) => CarController()),
           ChangeNotifierProvider(create: (context) => FilterController()),
-=======
+
           ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),),
           ChangeNotifierProvider(create:(context) =>UploadImageController(),),
           ChangeNotifierProvider(create:(context) =>ErrorTextController(),),
->>>>>>> master
+
 
 
         ],

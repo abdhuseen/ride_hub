@@ -27,7 +27,6 @@
   "gender":"Gender",
   "age":"Age",
   "car_license_image":" license image",
-  "id_image":"ID image",
   "create":"Create",
   "have_account":"Have account?",
   "login":"Login",
@@ -79,17 +78,13 @@
   "value":"Value",
   "confirm_new_password":"Confirm New Password",
   "update_password":"Update Password",
-<<<<<<< car
-  "general_information": "General Information"
-=======
+  "general_information": "General Information",
   "license_image":"License image",
   "id_image":"Id image",
   "front":"Front",
   "back":"Back",
   "done":"Done",
   "photo":"Photo",
->>>>>>> master
-
   "empty_field_error_msg":"Empty Field Here Not Allowed",
   "incorrect_email_or_password_error_msg":"Either email or password is incorrect",
   "email_valid_format_error_msg":"example@example.com",
@@ -110,5 +105,22 @@
   "password_and_confirm_password_are_not_equal_error_msg":"Password and confirm password are not equals",
   "email_is_used_before_error_msg":"this email used by another user",
   "phone_number_is_used_before_error_msg":"this phone number used by another user",
-  "incorrect_visa_card_data_error_msg":"Incorrect Visa Card Data"
+  "incorrect_visa_card_data_error_msg":"Incorrect Visa Card Data",
+  "previous_rental_requests" : "Previous Rental Requests",
+  "accept" : "Accept",
+  "reject" : "Reject",
+  "mileage" : "Mileage",
+  "seat_capacity" : "Seat Capacity",
+  "seat" : "Seat",
+  "km_balance" : "km balance",
+  "color" : "Color",
+  "car_number" : "Car Number",
+  "engine_option" : "Engine Option",
+  "l" : "L",
+  "cylinder" : "Cylinder",
+  "hoers_power" : "Hoers Power",
+  "transmission_type" : "Transmission Type",
+  "fuel_type" : "Fuel Type",
+  "performance_score" : "Performance Score"
+
 }
