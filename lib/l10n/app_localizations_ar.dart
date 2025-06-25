@@ -218,4 +218,46 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get reject => 'مرفوض';
+
+  @override
+  String get mileage => 'المسافة المقطوعة';
+
+  @override
+  String get seat_capacity => 'سعة المقعد';
+
+  @override
+  String get seat => 'مقعد';
+
+  @override
+  String get km_balance => 'كم';
+
+  @override
+  String get color => 'اللون';
+
+  @override
+  String get car_number => 'رقم السيارة';
+
+  @override
+  String get general_information => 'معلومات عامة';
+
+  @override
+  String get engine_option => 'خيار المحرك';
+
+  @override
+  String get l => 'لتر';
+
+  @override
+  String get cylinder => 'اسطوانة';
+
+  @override
+  String get hoers_power => 'قوة حصان';
+
+  @override
+  String get transmission_type => 'نوع ناقل الحركة';
+
+  @override
+  String get fuel_type => 'نوع الوقود';
+
+  @override
+  String get performance_score => 'درجة الأداء';
 }

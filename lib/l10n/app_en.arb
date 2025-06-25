@@ -68,5 +68,19 @@
   "female":"Female",
   "previous_rental_requests" : "Previous Rental Requests",
   "accept" : "Accept",
-  "reject" : "Reject"
+  "reject" : "Reject",
+  "mileage" : "Mileage",
+  "seat_capacity" : "Seat Capacity",
+  "seat" : "Seat",
+  "km_balance" : "km balance",
+  "color" : "Color",
+  "car_number" : "Car Number",
+  "general_information" : "General Information",
+  "engine_option" : "Engine Option",
+  "l" : "L",
+  "cylinder" : "Cylinder",
+  "hoers_power" : "Hoers Power",
+  "transmission_type" : "Transmission Type",
+  "fuel_type" : "Fuel Type",
+  "performance_score" : "Performance Score"
 }

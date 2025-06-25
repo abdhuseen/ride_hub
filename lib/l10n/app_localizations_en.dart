@@ -220,4 +220,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reject => 'Reject';
+
+  @override
+  String get mileage => 'Mileage';
+
+  @override
+  String get seat_capacity => 'Seat Capacity';
+
+  @override
+  String get seat => 'Seat';
+
+  @override
+  String get km_balance => 'km balance';
+
+  @override
+  String get color => 'Color';
+
+  @override
+  String get car_number => 'Car Number';
+
+  @override
+  String get general_information => 'General Information';
+
+  @override
+  String get engine_option => 'Engine Option';
+
+  @override
+  String get l => 'L';
+
+  @override
+  String get cylinder => 'Cylinder';
+
+  @override
+  String get hoers_power => 'Hoers Power';
+
+  @override
+  String get transmission_type => 'Transmission Type';
+
+  @override
+  String get fuel_type => 'Fuel Type';
+
+  @override
+  String get performance_score => 'Performance Score';
 }

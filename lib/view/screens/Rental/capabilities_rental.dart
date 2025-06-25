@@ -74,7 +74,7 @@ class CapabilitiesRental extends StatelessWidget {
                         ),
                         // Rental Cost
                         BaseText(
-                          text: '$rentalCost JD/day',
+                          text: '$rentalCost ${AppLang.getLang(context: context).jd_day}',
                           fontSize: AppConstants.size8.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.backgroundColor2,
@@ -100,13 +100,13 @@ class CapabilitiesRental extends StatelessWidget {
                       children: [
                         // Engine Option
                         BaseText(
-                          text: '* Engine Option:',
+                          text: '* ${AppLang.getLang(context: context).engine_option}:',
                           fontSize: AppConstants.size6.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
                         ),
                         BaseText(
-                          text: '  $engineCapacity L\n  $engineType',
+                          text: '  $engineCapacity ${AppLang.getLang(context: context).l}\n  $engineType',
                           fontSize: AppConstants.size6.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
@@ -114,7 +114,7 @@ class CapabilitiesRental extends StatelessWidget {
                         SizedBox(height: 15.h),
                         // Hours Power
                         BaseText(
-                          text: '* Hours Power:',
+                          text: '* ${AppLang.getLang(context: context).hoers_power}:',
                           fontSize: AppConstants.size6.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
@@ -128,7 +128,7 @@ class CapabilitiesRental extends StatelessWidget {
                         SizedBox(height: 15.h),
                         // Transmission Type
                         BaseText(
-                          text: '* Transmission Type:',
+                          text: '* ${AppLang.getLang(context: context).transmission_type}:',
                           fontSize: AppConstants.size6.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
@@ -142,7 +142,7 @@ class CapabilitiesRental extends StatelessWidget {
                         SizedBox(height: 15.h),
                         // Fuel type
                         BaseText(
-                          text: '* Fuel type:',
+                          text: '* ${AppLang.getLang(context: context).fuel_type}:',
                           fontSize: AppConstants.size6.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,
@@ -156,7 +156,7 @@ class CapabilitiesRental extends StatelessWidget {
                         SizedBox(height: 15.h),
                         // Performance score
                         BaseText(
-                          text: '* Performance Score:',
+                          text: '* ${AppLang.getLang(context: context).performance_score}:',
                           fontSize: AppConstants.size6.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.primaryTextColor,

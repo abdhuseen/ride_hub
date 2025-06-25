@@ -247,7 +247,7 @@ class RentalHome extends StatelessWidget {
                   children: [
                     // Previous Rental Requests button
                     PrimaryButton(
-                      text: 'Previous Rental Requests',
+                      text: AppLang.getLang(context: context).previous_rental_requests,
                       onClick: () {
                         if (login == true) {
                           Navigator.push(

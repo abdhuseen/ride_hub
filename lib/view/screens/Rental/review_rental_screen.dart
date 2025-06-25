@@ -75,7 +75,7 @@ class ReviewRentalScreen extends StatelessWidget {
                           textColor: AppConstants.primaryTextColor,
                         ),
                         BaseText(
-                          text: '$rentalCost JD/day',
+                          text: '$rentalCost ${AppLang.getLang(context: context).jd_day}',
                           fontSize: AppConstants.size8.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.backgroundColor2,

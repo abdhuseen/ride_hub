@@ -70,7 +70,7 @@ class GeneralInfoRental extends StatelessWidget {
                         ),
                         // Rental cost
                         BaseText(
-                          text: '$rentalCost JD/day',
+                          text: '$rentalCost ${AppLang.getLang(context: context).jd_day}',
                           fontSize: AppConstants.size8.sp,
                           FontFamily: 'Mulish-Bold',
                           textColor: AppConstants.backgroundColor2,
@@ -82,7 +82,7 @@ class GeneralInfoRental extends StatelessWidget {
                   // Mileage & Seat Capacity
                   Container(
                     width: 380.w,
-                    height: 150.h,
+                    height: 160.h,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Color.fromARGB(20, 53, 51, 146),
@@ -98,13 +98,13 @@ class GeneralInfoRental extends StatelessWidget {
                         Row(
                           children: [
                             BaseText(
-                              text: '* Mileage:',
+                              text: '* ${AppLang.getLang(context: context).mileage}:',
                               fontSize: AppConstants.size6.sp,
                               FontFamily: 'Mulish-Bold',
                               textColor: AppConstants.primaryTextColor,
                             ),
                             BaseText(
-                              text: '  $mileage km balance',
+                              text: '  $mileage ${AppLang.getLang(context: context).km_balance}',
                               fontSize: AppConstants.size6.sp,
                               FontFamily: 'Mulish-Bold',
                               textColor: AppConstants.primaryTextColor,
@@ -117,13 +117,13 @@ class GeneralInfoRental extends StatelessWidget {
                         Row(
                           children: [
                             BaseText(
-                              text: '* Seat Capacity:',
+                              text: '* ${AppLang.getLang(context: context).seat_capacity}:',
                               fontSize: AppConstants.size6.sp,
                               FontFamily: 'Mulish-Bold',
                               textColor: AppConstants.primaryTextColor,
                             ),
                             BaseText(
-                              text: '  $seatCapacity seat',
+                              text: '  $seatCapacity ${AppLang.getLang(context: context).seat}',
                               fontSize: AppConstants.size6.sp,
                               FontFamily: 'Mulish-Bold',
                               textColor: AppConstants.primaryTextColor,
@@ -136,7 +136,7 @@ class GeneralInfoRental extends StatelessWidget {
                         Row(
                           children: [
                             BaseText(
-                              text: '* Color:',
+                              text: '* ${AppLang.getLang(context: context).color}:',
                               fontSize: AppConstants.size6.sp,
                               FontFamily: 'Mulish-Bold',
                               textColor: AppConstants.primaryTextColor,
@@ -155,7 +155,7 @@ class GeneralInfoRental extends StatelessWidget {
                         Row(
                           children: [
                             BaseText(
-                              text: '* Car Number:',
+                              text: '* ${AppLang.getLang(context: context).car_number}:',
                               fontSize: AppConstants.size6.sp,
                               FontFamily: 'Mulish-Bold',
                               textColor: AppConstants.primaryTextColor,
@@ -174,7 +174,7 @@ class GeneralInfoRental extends StatelessWidget {
                   SizedBox(height: 20.h),
                   // General Information title
                   BaseText(
-                    text: 'General Information',
+                    text: AppLang.getLang(context: context).general_information,
                     fontSize: AppConstants.size5.sp,
                     FontFamily: 'Mulish-Bold',
                     textColor: AppConstants.primaryTextColor,
