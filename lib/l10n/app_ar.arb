@@ -66,9 +66,9 @@
   "submit": "إرسال",
   "male": "ذكر",
   "female": "أنثى",
-  "create_account":"إنشاء حساب",
+  "create_account": "إنشاء حساب",
   "email": "البريد الإلكتروني",
-  "card_holder_name":"اسم صاحب البطاقة",
+  "card_holder_name": "اسم صاحب البطاقة",
   "successful_reservation": "تم الحجز بنجاح",
   "send_btn": "إرسال",
   "cancel_btn": "إلغاء",
@@ -79,12 +79,12 @@
   "value": "القيمة",
   "confirm_new_password": "تأكيد كلمة المرور الجديدة",
   "update_password": "تحديث كلمة المرور",
+  "general_information": "معلومات عامة",
   "license_image": "صورة الرخصة",
-  "id_image": "صورة الهوية",
   "front": "الصورة الأمامية",
   "back": "الصورة الخلفية",
   "done": "إنهاء",
-  "photo":"الصورة",
+  "photo": "الصورة",
   "empty_field_error_msg": "لا يمكن ترك الحقل فارغًا",
   "incorrect_email_or_password_error_msg": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
   "email_valid_format_error_msg": "example@example.com",
@@ -106,13 +106,5 @@
   "email_is_used_before_error_msg": "تم استخدام هذا البريد الإلكتروني من قبل",
   "phone_number_is_used_before_error_msg": "تم استخدام رقم الهاتف هذا من قبل",
   "incorrect_visa_card_data_error_msg": "بيانات بطاقة الفيزا غير صحيحة"
-
-
-
-
-
-
-
-
-
 }
+
