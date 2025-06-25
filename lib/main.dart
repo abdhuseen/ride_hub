@@ -44,8 +44,8 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create:(context) =>CounterController(),),
           ChangeNotifierProvider(create:(context) =>PaymentMethodSwitchButtonController(),
           ),
-          ChangeNotifierProvider(create: (_) => CarController()),
-          ChangeNotifierProvider(create: (_) => FilterController()),
+          ChangeNotifierProvider(create: (context) => CarController()),
+          ChangeNotifierProvider(create: (context) => FilterController()),
 
 
         ],
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
       child:Scaffold(
 
         body:Center(
-          child:HomeView(),
+          child:LoginScreen(),
         ),
       ),
     );
