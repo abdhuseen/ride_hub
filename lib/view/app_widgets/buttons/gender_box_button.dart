@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../../../constants/app_constants.dart';
 import '../../../constants/app_lang.dart';
-import '../../../controller/gender_controller.dart';
+import '../../../controller/widgets_controller/gender_controller.dart';
 
 
 class GenderBoxButton extends StatelessWidget {

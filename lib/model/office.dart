@@ -6,6 +6,7 @@ class Office {
   String location;
   String phoneNumber;
   String description;
+  int reviews;
 
   Office({
     required this.name,
@@ -15,6 +16,7 @@ class Office {
     required this.description,
     required this.location,
     required this.phoneNumber,
+    required this.reviews
   });
 
   // fromJson constructor
@@ -27,6 +29,7 @@ class Office {
       location: json['location'],
       phoneNumber: json['phoneNumber'],
       description: json['description'],
+      reviews:json["reviews"]
     );
   }
 
@@ -40,6 +43,7 @@ class Office {
       'description' :description,
       'phoneNumber' : phoneNumber,
       'loaction' : location,
+       'reviews':reviews
     };
   }
 }

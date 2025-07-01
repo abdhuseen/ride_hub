@@ -8,9 +8,9 @@ import 'package:ride_hub/validations/email_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
-import 'package:ride_hub/view/screens/verify_screen.dart';
+import 'package:ride_hub/view/screens/authentication_screens/verify_screen.dart';
 
-import '../../../controller/error_text_controller.dart';
+import '../../../controller/widgets_controller/error_text_controller.dart';
 import 'input_text.dart';
 
 class EmailBox extends StatelessWidget {
@@ -51,6 +51,7 @@ class EmailBox extends StatelessWidget {
                 ),
                 textInputType: TextInputType.emailAddress,
                 controller: emailController,
+                indexOfInputField:0,
               ),
             ),
             //functional buttons
@@ -92,7 +93,8 @@ class EmailBox extends StatelessWidget {
 
 
               ],
-            )
+            ),
+            SizedBox(height:58.h,)
           ],
 
 

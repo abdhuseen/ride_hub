@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_constants.dart';
-import 'package:ride_hub/controller/counter_controller.dart';
+import 'package:ride_hub/controller/widgets_controller/counter_controller.dart';
 
 class Counter extends StatelessWidget {
   const Counter({super.key});

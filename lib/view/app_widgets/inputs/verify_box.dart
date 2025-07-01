@@ -7,8 +7,8 @@ import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
-import 'package:ride_hub/view/screens/update_password_screen.dart';
-import '../../../controller/error_text_controller.dart';
+import 'package:ride_hub/view/screens/authentication_screens/update_password_screen.dart';
+import '../../../controller/widgets_controller/error_text_controller.dart';
 import 'input_text.dart';
 
 class VerifyBox extends StatelessWidget {
@@ -49,6 +49,7 @@ class VerifyBox extends StatelessWidget {
               ),
               textInputType: TextInputType.number,
               controller:otpController,
+              indexOfInputField:10,
             ),
           ),
           SizedBox(height:24.h,),
@@ -77,7 +78,8 @@ class VerifyBox extends StatelessWidget {
 
 
               },width:68),
-            )
+            ),
+          SizedBox(height:47.h,)
         ],
 
 

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,11 +5,8 @@ import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
 import 'package:ride_hub/validations/password_validations.dart';
 import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
-import 'package:ride_hub/view/app_widgets/buttons/txt_button.dart';
 import 'package:ride_hub/view/app_widgets/inputs/main_box.dart';
-import 'package:ride_hub/view/screens/login_screen.dart';
-
-import '../../../controller/error_text_controller.dart';
+import 'package:ride_hub/view/screens/authentication_screens/login_screen.dart';
 import 'input_text.dart';
 
 class UpdatePasswordBox extends StatelessWidget {
@@ -53,6 +49,7 @@ class UpdatePasswordBox extends StatelessWidget {
             textInputType:TextInputType.text,
             controller:passwordController,
             isPassword: true,
+            indexOfInputField:8,
           ),
           ),
           //confirm password label
@@ -86,6 +83,7 @@ class UpdatePasswordBox extends StatelessWidget {
               controller:confirmPasswordController,
               isPassword: true,
               isConfirmPassword:true,
+              indexOfInputField:8,
             ),
           ),
           SizedBox(height:12.h,),
@@ -116,7 +114,8 @@ class UpdatePasswordBox extends StatelessWidget {
 
 
             }, width:272),
-          )
+          ),
+          SizedBox(height:57.h,)
 
         ],
 

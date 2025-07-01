@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
-import '../../../controller/payment_method_switch_button_controller.dart';
+import '../../../controller/widgets_controller/payment_method_switch_button_controller.dart';
 
 class PaymentMethodSwitchButton extends StatelessWidget {
   const PaymentMethodSwitchButton({super.key});
@@ -17,7 +17,7 @@ class PaymentMethodSwitchButton extends StatelessWidget {
 
         return Row(
           children: [
-            GestureDetector(
+            InkWell(
               onTap: () {
                 paymentMethodSwitchButtonController.setPaymentMethod(0);
               },
@@ -49,7 +49,7 @@ class PaymentMethodSwitchButton extends StatelessWidget {
               ),
             ),
             SizedBox(width: 12.w),
-            GestureDetector(
+            InkWell(
               onTap: () {
                 paymentMethodSwitchButtonController.setPaymentMethod(1);
               },

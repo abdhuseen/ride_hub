@@ -1,0 +1,6 @@
+here we have an car screen details used in both rent and buy sections the difference only
+the button which is rate (in buy section) or book (in rent section) will use an flag called
+selection flag determine which used rate or book
+
+-----------------|Rent|Buy
+selection Flag   | 0  | 1

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ride_hub/view/screens/selection_screen.dart';
+import 'package:ride_hub/view/screens/onboarding_screens/selection_screen.dart';
 
 import '../../../constants/app_constants.dart';
 

@@ -55,6 +55,8 @@ class AppConstants {
   static const hintTextColor3=Color(0xff858484);
   ///used for text hint color code is #6C7278
   static const hintTextColor4=Color(0xff6c7278);
+  ///text hint color code is #666666
+  static const hintTextColor5=Color(0xff666666);
   ///background color code is #1A1A1A
  static const backgroundColor1=Color(0xff1A1A1A);
   ///background color code is #2CB67D
@@ -65,6 +67,18 @@ class AppConstants {
   static const backgroundColor4=Color(0xffeaecf0);
   ///background color code is #E2E2E2
   static const backgroundColor5=Color(0xffe2e2e2);
+  ///background color code is #F5F6F8
+  static const backgroundColor6=Color(0xfff5f6f8);
+  ///background color code is #35339233
+  static const backgroundColor7=Color(0x33353392);
+  ///background color code is #D9D9D9
+  static const backgroundColor8=Color(0xffd9d9d9);
+  ///background color code is #EBEBEB
+  static const backgroundColor9=Color(0xffebebeb);
+  ///used for backgroundColor code is  #B2B2B2
+  static const backgroundColor10=Color(0xffb2b2b2);
+
+
 
 
   //app font size
@@ -77,6 +91,7 @@ class AppConstants {
   static  double size7=15;
   static  double size8=14;
   static  double size9=12;
+
 
 
 

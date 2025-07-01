@@ -50,38 +50,8 @@ class Car {
   });
 
   // fromJson constructor
-  // factory Car.fromJson(Map<String, dynamic> json) {
-  //   return Car(
-  //     name: json['name'],
-  //     imagesLinks: List<String>.from(json['imagesLinks']),
-  //     model: json['model'],
-  //     year: json['year'],
-  //     rentCost: (json['rentCost'] as num).toDouble(),
-  //     capabilities: json['capabilities'],
-  //     generalInfo: json['generalInfo'],
-  //     reviews: json['reviews'],
-  //     rate: (json['rate'] as num).toDouble(),
-  //     isReserved: json['isReserved'] ?? false,
-  //     price: (json['price'] as num).toDouble(),
-  //     dateOfAdd: json['dateOfAdd'],
-  //   );
-  // }
+
 
   // toJson method
-  // Map<String, dynamic> toJson() {
-  //   return {
-  //     'name': name,
-  //     'imagesLinks': imagesLinks,
-  //     'model': model,
-  //     'year': year,
-  //     'rentCost': rentCost,
-  //     'capabilities': capabilities,
-  //     'generalInfo': generalInfo,
-  //     'reviews': reviews,
-  //     'rate': rate,
-  //     'isReserved': isReserved,
-  //     'price': price,
-  //     'dateOfAdd': dateOfAdd,
-  //   };
-  // }
+
 }

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
-import 'package:ride_hub/controller/error_text_controller.dart';
+import 'package:ride_hub/controller/widgets_controller/error_text_controller.dart';
 import 'package:ride_hub/controller/login_controller.dart';
 import 'package:ride_hub/validations/age_validations.dart';
 import 'package:ride_hub/validations/card_holder_name_validations.dart';
@@ -23,7 +23,8 @@ class InputText extends StatelessWidget {
   final TextInputType textInputType;
   final bool isMini;
   final bool isConfirmPassword;
-
+  ///determine type of input text for email,phone,........
+  final int indexOfInputField;
   const InputText({
     super.key,
     required this.hintText,
@@ -33,6 +34,7 @@ class InputText extends StatelessWidget {
     this.controller,
     this.isMini = false,
     this.isConfirmPassword = false,
+    required this.indexOfInputField
   });
 
   @override
@@ -41,55 +43,56 @@ class InputText extends StatelessWidget {
   }
 
   Widget normalInputField(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: isMini ? 177.w : 380.w,
-          decoration: BoxDecoration(
-            color: AppConstants.secondaryColor,
-            borderRadius: BorderRadius.circular(25.r),
-            border: Border.all(
-              color: AppConstants.backgroundColor4,
-              width: 1,
+    return Consumer<ErrorTextController>(builder:(context,errorTextController, child) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: isMini ? 177.w : 380.w,
+            decoration: BoxDecoration(
+              color: AppConstants.secondaryColor,
+              borderRadius: BorderRadius.circular(25.r),
+              border: Border.all(
+                color: AppConstants.backgroundColor4,
+                width: 1,
+              ),
+            ),
+            child: TextField(
+              controller: controller,
+              keyboardType: textInputType,
+              onChanged: (value) {
+                _handleValidation(context, value);
+              },
+              style: TextStyle(
+                fontSize: AppConstants.size8,
+                color: AppConstants.primaryTextColor2,
+              ),
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.symmetric(horizontal: 16.w),
+                hintText: hintText,
+                hintStyle: hintStyle,
+                border: InputBorder.none,
+              ),
             ),
           ),
-          child: TextField(
-            controller: controller,
-            keyboardType: textInputType,
-            onChanged: (value) {
-              _handleValidation(context, value);
-            },
-            style: TextStyle(
-              fontSize: AppConstants.size8,
-              color: AppConstants.primaryTextColor2,
-            ),
-            decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(horizontal: 16.w),
-              hintText: hintText,
-              hintStyle: hintStyle,
-              border: InputBorder.none,
-            ),
-          ),
-        ),
-        /*if (errorController.error.isNotEmpty)
           Padding(
             padding: EdgeInsets.only(top: 4.h, left: 12.w),
             child: Text(
-              errorController.error,
+              errorTextController.errors[indexOfInputField],
               style: TextStyle(
                 color: Colors.red,
                 fontSize: AppConstants.size9.sp,
               ),
             ),
-          ),*/
-      ],
-    );
+          ),
+        ],
+      );
+    },);
   }
 
   Widget passwordInputField(BuildContext context) {
-    return Consumer<LoginController>(
-      builder: (context, loginController, child) {
+    return Consumer2<LoginController,ErrorTextController>(
+      builder: (context, loginController,errorController, child) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -121,7 +124,7 @@ class InputText extends StatelessWidget {
                       ? AppLang.getLang(context: context)
                       .password_valid_format_error_msg
                       : "";
-                  //errorController.setError(error);
+                  errorController.setError(error,8);
                 },
                 style: TextStyle(
                   fontSize: AppConstants.size8,
@@ -159,17 +162,16 @@ class InputText extends StatelessWidget {
                 ),
               ),
             ),
-            /*if (errorController.error.isNotEmpty)
               Padding(
                 padding: EdgeInsets.only(top: 4.h, left: 12.w),
                 child: Text(
-                  errorController.error,
+                  errorController.errors[8],
                   style: TextStyle(
                     color: Colors.red,
                     fontSize: AppConstants.size9.sp,
                   ),
                 ),
-              ),*/
+              ),
           ],
         );
       },
@@ -179,9 +181,12 @@ class InputText extends StatelessWidget {
   void _handleValidation(BuildContext context, String value) {
     final lang = AppLang.getLang(context: context);
     String error = "";
+    int index=0;
+    ErrorTextController errorController=Provider.of<ErrorTextController>(context,listen:false);
 
     switch (hintText) {
       case "Email":
+        index=0;
         bool isEmpty = EmailValidations.isEmailEmpty(value);
         bool isValid = EmailValidations.isCorrectEmailFormat(value);
         error = isEmpty
@@ -192,6 +197,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "Phone Number":
+        index=1;
         bool isEmpty = PhoneNumberValidations.isPhoneNumberEmpty(value);
         bool isValid = PhoneNumberValidations.isCorrectPhoneNumberFormat(value);
         error = isEmpty
@@ -202,6 +208,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "Full Name":
+        index=2;
         bool isEmpty = FullNameValidations.isFullNameEmpty(value);
         bool isValid = FullNameValidations.isCorrectFullNameFormat(value);
         error = isEmpty
@@ -212,6 +219,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "Age":
+        index=3;
         bool isEmpty = AgeValidations.isAgeEmpty(value);
         bool isValid = AgeValidations.isCorrectAgeRange(value);
         error = isEmpty
@@ -222,6 +230,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "card holder name":
+        index=4;
         bool isEmpty = CardHolderNameValidations.isCardHolderNameEmpty(value);
         bool isValid =
         CardHolderNameValidations.isCorrectFormatCardHolderName(value);
@@ -233,6 +242,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "XXXX XXXX XXXX XXXX":
+        index=5;
         bool isEmpty = CardNumberValidations.isCardNumberEmpty(value);
         bool isValid =
         CardNumberValidations.isCorrectCardNumberFormat(value);
@@ -244,6 +254,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "06/23":
+        index=6;
         bool isEmpty = ExpriyDateValidations.isExpriyDateEmpty(value);
         bool isValid =
         ExpriyDateValidations.isCorrectExpiryDateFormat(value);
@@ -255,6 +266,7 @@ class InputText extends StatelessWidget {
         break;
 
       case "XXX":
+        index=7;
         bool isEmpty = CvvValidations.isCvvEmpty(value);
         bool isValid = CvvValidations.isCorrectCVVFormat(value);
         error = isEmpty
@@ -263,13 +275,13 @@ class InputText extends StatelessWidget {
             ? lang.cvv_valid_format_error_msg
             : "";
         break;
-
       default:
+        //purpose of reservation
+        index=9;
         bool isEmpty = value.isEmpty;
         error = isEmpty ? lang.empty_field_error_msg : "";
         break;
     }
-
-    //errorController.setError(error);
+    errorController.setError(error,index);
   }
 }

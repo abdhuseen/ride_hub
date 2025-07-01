@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:ride_hub/constants/app_constants.dart';
 import 'package:ride_hub/constants/app_lang.dart';
-import 'package:ride_hub/controller/upload_image_controller.dart';
+import 'package:ride_hub/controller/widgets_controller/upload_image_controller.dart';
 import 'package:ride_hub/view/app_widgets/buttons/secondary_button.dart';
 import 'package:ride_hub/view/app_widgets/picture_box.dart';
 /// hint with upload photos for  id and license

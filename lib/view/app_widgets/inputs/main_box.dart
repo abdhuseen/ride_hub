@@ -10,7 +10,6 @@ class MainBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width:348.w,
-      height:270.h,
       decoration:BoxDecoration(
         color:AppConstants.secondaryColor,
         borderRadius:BorderRadius.circular(8.r),
